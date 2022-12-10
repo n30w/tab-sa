@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="relative px-6 lg:px-8 2xl:pt-16">
-          <div className="mx-auto max-w-auto pt-28 pb-36 sm:pt-60 sm:pb-60 md:pt-48 sm:pb-84 2xl:h-screen bg-slate-100">
+          <div className="mx-auto max-w-auto pt-28 pb-36 sm:pt-60 sm:pb-60 md:pt-48 sm:pb-84 2xl:h-screen">
             <div>
               <div className="flex justify-center">
                 <img src="/Landing.svg" className="2xl:scale-150"></img>
@@ -64,7 +64,6 @@ export default function Home() {
             our Southern African colleagues in rural schools.
           </p>
           <div className="max-w-auto"></div>
-          <div className="bg-red-400">asdasdasdasds</div>
         </div>
       </div>
       <div className="hero min-h-screen bg-slate-100 content-around">

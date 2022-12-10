@@ -29,7 +29,7 @@ export default function Navbar() {
             {!mobileMenuOpen && (
               <button
                 type="button"
-                className={`-m-1.5 inline-flex items-center justify-start rounded-md p-3.5 text-black border-2 border-black bg-white pl-10 hover:bg-[#FFB612]`}
+                className={`-m-1.5 inline-flex items-center justify-start rounded-md p-3.5 text-black border-2 border-black bg-white pl-10`}
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -39,7 +39,7 @@ export default function Navbar() {
             {mobileMenuOpen && (
               <button
                 type="button"
-                className="-m-1.5 inline-flex items-center justify-start rounded-md p-3.5 text-black border-2 border-black bg-white pl-10 hover:text-white hover:bg-[#DE3831]"
+                className="-m-1.5 inline-flex items-center justify-start rounded-md p-3.5 border-2 border-black pl-10 text-white bg-[#DE3831]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -52,38 +52,38 @@ export default function Navbar() {
             <Dialog.Panel
               //@ts-ignore
               focus="true"
-              className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden"
+              className="fixed inset-0 overflow-y-auto bg-white px-6 py-6 md:hidden"
             >
               <div className="flex h-9 items-center justify-between">
                 <div className="flex">
-                  <a href="#" className="p-1.5">
+                  <Link href="/" className="p-1.5">
                     <span className="sr-only">
                       Teachers Across Borders Southern Africa
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-10 flow-root">
                 <div className="-my-2 divide-y divide-gray-500/10">
                   <div className="space-y-7 py-10">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
-                        className={`block border-black border-2 rounded-lg py-8 px-7 font-atkinson text-4xl leading-7 text-black hover:bg-[##FFB612]`}
+                        className={`block border-black border-2 rounded-lg py-8 px-7 font-atkinson text-4xl leading-7 text-black`}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                     <div className="divider"></div>
                     {navigation2.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="block border-black border-2 rounded-lg py-8 px-5 font-atkinson text-4xl leading-7 text-black hover:text-white hover:bg-[#007A4D]"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export default function Navbar() {
             </Dialog.Panel>
           </Dialog>
 
-          <div className="flex w-full justify-center space-x-1 sm:space-x-4 mx-10 text-md sm:text-xl font-atkinson bg-black py-4 px-2 rounded-lg border-2 border-black text-white text-center">
+          <div className="flex w-full justify-center space-x-1 sm:space-x-4 mx-10 text-md sm:text-xl font-atkinson bg-[#2B6798] py-4 px-2 rounded-lg border-2 border-black text-white text-center">
             <div className="flex sm:hidden font-bold">TAB</div>
             <div className="hidden sm:flex font-bold">
               Teachers Across Borders
@@ -107,15 +107,17 @@ export default function Navbar() {
             aria-label="Global"
           >
             {/* bg-gradient-to-r from-[#003166] to-[#2B6798] */}
-            <div className="mx-2 w-full flex -mt-2 pt-4 space-x-3 font-atkinson rounded-lg px-2 py-2 font-bold text-4xl border bg-black border-black text-white ">
-              <div>
-                Teachers Across Borders{" "}
-                <span className="text-xl font-normal">Southern Africa</span>
+            <div className="mx-9 w-full flex -mt-1 pt-4 space-x-3 font-atkinson rounded-lg px-2 py-4 font-bold text-4xl border bg-[#2B6798] border-none text-white justify-center ">
+              <div className="tracking-wide">
+                <Link href="/">
+                  Teachers Across Borders{" "}
+                  <span className="text-xl font-normal">Southern Africa</span>
+                </Link>
               </div>
             </div>
           </div>
           <nav
-            className="hidden md:flex h-9 items-center pt-6"
+            className="hidden md:flex h-9 items-center pt-8"
             aria-label="Global"
           >
             <div className="grow hidden md:flex w-full lg:flex-1 justify-start md:pl-10">
