@@ -1,5 +1,4 @@
-import { Head } from "next/document";
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
 
 export default function Layout({ children }: any) {
   return (
