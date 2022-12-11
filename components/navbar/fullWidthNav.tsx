@@ -1,7 +1,8 @@
 import Link from "next/link";
-import router from "next/router";
+import { useRouter } from "next/router";
 
 export default function FullWidthNavbar({ navigation }: any) {
+  const router = useRouter();
   return (
     <>
       <div className="flex flex-col">
