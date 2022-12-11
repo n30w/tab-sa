@@ -13,7 +13,10 @@ export default function Home() {
           <div className="mx-auto max-w-auto pt-28 pb-36 sm:pt-60 sm:pb-60 md:pt-48 sm:pb-84 2xl:h-screen">
             <div>
               <div className="flex justify-center">
-                <img src="/Landing.svg" className="2xl:scale-150"></img>
+                <img
+                  src="/Landing.svg"
+                  className="2xl:scale-150 2xl:pt-12"
+                ></img>
               </div>
               <div className="flex flex-col justify-center space-y-2 pt-7">
                 <div className="h-7 2xl:h-28"></div>
