@@ -27,6 +27,15 @@ export default function Navbar() {
         {/* Tablet and Desktop Navbar */}
         <FullWidthNavbar navigation={navigation} />
       </header>
+      <footer className="fixed md:hidden w-screen h-screen z-50">
+        <div className="grid h-screen grid-cols-1 content-end">
+          <div className="flex w-full items-center justify-center">
+            <div className="h-auto px-48 pb-7 pt-3 -mb-4 bg-white border-2 border-black rounded-xl text-black text-center text-2xl cursor-pointer">
+              <Bars3Icon className="h-10 w-10" />
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

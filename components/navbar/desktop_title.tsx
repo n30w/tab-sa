@@ -6,8 +6,8 @@ export default function DesktopTitle() {
     <>
       {/* bg-gradient-to-r from-[#003166] to-[#2B6798] */}
       <div className="w-screen" aria-label="Global">
-        <div className="flex transition-colors duration-800 ease-in-out px-10 w-screen -mt-2 -ml-2 pt-6 space-x-4 rounded-lg py-5 2xl:mb-1 pb-4 lg:pb-6 bg-white border-2 border-black justify-between md:justify-evenly">
-          <div className="flex justify-start md:justify-center font-atkinson tracking-normal text-black">
+        <div className="flex transition-colors duration-800 ease-in-out px-10 w-screen -mt-2 pt-6 space-x-4 rounded-lg py-5 2xl:mb-1 pb-4 lg:pb-6 bg-white border-2 border-black justify-between md:justify-evenly">
+          <div className="flex justify-center font-atkinson tracking-normal text-black">
             <Link href="/">
               <span className="hidden sm:inline-block font-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl">
                 Teachers Across Borders
@@ -20,11 +20,6 @@ export default function DesktopTitle() {
                 Southern Africa
               </span>
             </Link>
-          </div>
-          <div className="flex md:hidden justify-end">
-            <div>
-              <Bars3Icon className="h-10 w-10"></Bars3Icon>
-            </div>
           </div>
         </div>
       </div>
