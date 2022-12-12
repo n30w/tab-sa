@@ -13,7 +13,8 @@ export default function DesktopTitle({ mobileMenuOpen }: any) {
                   Teachers Across Borders
                 </span>
                 <span className="inline-block sm:hidden text-4xl font-bold">
-                  TAB-SA
+                  TAB{" "}
+                  <span className="text-xl font-normal">Southern Africa</span>
                 </span>
                 {"  "}
                 <span className="pl-2 hidden sm:inline-block text-lg sm:text-xl md:text-2xl font-normal">

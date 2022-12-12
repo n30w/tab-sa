@@ -31,15 +31,16 @@ export default function Navbar() {
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <Dialog.Panel
             focus="true"
-            className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 md:hidden font-atkinson"
+            className="fixed inset-0 z-10 overflow-y-auto bg-white px-6  md:hidden font-atkinson"
           >
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+            {/* Menu buttons */}
+            <div className="my-2 flow-root justify-between">
+              <div className="divide-gray-500/10">
+                <div className="space-y-4">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href} className="">
                       <div
-                        className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 cursor-pointer"
+                        className="flex my-4 -mx-3 rounded-lg py-4 text-center px-3 border-2 border-black font-normal leading-7 text-black text-2xl hover:bg-gray-400/10 cursor-pointer"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -49,12 +50,16 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 align-center content-end place-content-between h-56">
-              <div className="flex">
+
+            {/* Close button */}
+            <div className="grid grid-cols-1 align-center content-end place-content-between">
+              <div
+                className="flex justify-center border-2 border-black rounded-xl py-2 cursor-pointer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 <button
                   type="button"
                   className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-10 w-10" aria-hidden="true" />
