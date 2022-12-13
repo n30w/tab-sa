@@ -30,6 +30,7 @@ export default function Navbar() {
 
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <Dialog.Panel
+            //@ts-ignore
             focus="true"
             className="fixed inset-0 z-10 overflow-y-auto bg-white px-6  md:hidden font-atkinson"
           >
