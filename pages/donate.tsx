@@ -1,5 +1,5 @@
+import { ComputerDesktopIcon, PrinterIcon } from "@heroicons/react/24/outline";
 import Head from "next/head";
-import Link from "next/link";
 
 export default function Donate() {
   return (
@@ -12,34 +12,55 @@ export default function Donate() {
 
       <div className="page">
         <div className="content">
-          <div className="sectionHeader">Donate</div>
-          <div className="sectionContent pt-20">
-            <div className="flex flex-col justify-center w-full lg:flex-row">
+          <div className="sectionHeader">Help Us Pay It Forward</div>
+          <div className="sectionContent">
+            <h1 className="text-3xl text-left md:text-center">
+              You can donate to us using these two methods
+            </h1>
+            <div className="flex flex-col justify-center w-full lg:flex-row py-12">
               <a
                 href="https://givebox.com/517849"
-                className="grid flex-grow h-36 card bg-tabTheme-200 text-white rounded-box place-items-center cursor-pointer"
+                className="cursor-pointer"
                 target={"_blank"}
               >
-                Givebox
-                <p className="text-center text-lg md:text-xl">
-                  An online donation service for non-profit fundraising.
-                </p>
+                <div className="grid grid-cols-2 place-items-center flex-grow h-44 w- card rounded-box text-white  bg-tabTheme-200">
+                  <div className="flex flex-col justify-between space-y-2 items-center px-2">
+                    <div className="text-2xl 2xl:text-4xl font-bold text-center tracking-wide">
+                      Givebox
+                    </div>
+                    <ComputerDesktopIcon className=":w-20 h-20" />
+                  </div>
+                  <div className="flex justify-center text-xl md:text-2xl px-2">
+                    Givebox is an online donation service for non-profit
+                    fundraising.
+                  </div>
+                </div>
               </a>
               <div className="divider lg:divider-horizontal">OR</div>
-              <a
-                href=""
-                className="grid flex-grow h-36 card bg-base-300 rounded-box place-items-center"
-                target={"_blank"}
-              >
-                Mail Form
-                <p className="text-center">
-                  A printable PDF form to be mailed.
-                </p>
+              <a href="" className="cursor-pointer" target={"_blank"}>
+                <div className="grid grid-cols-2 place-items-center flex-grow h-44 w-full card rounded-box text-white  bg-tabTheme-100">
+                  <div className="flex flex-col justify-between space-y-2 items-center px-2">
+                    <div className="text-2xl 2xl:text-4xl text-center font-bold tracking-wide">
+                      Mail-in Form
+                    </div>
+                    <PrinterIcon className="h-20 w-20" />
+                  </div>
+                  <div className="flex justify-center text-xl md:text-2xl px-2">
+                    A PDF form can be downloaded, printed, and mailed to us.
+                  </div>
+                </div>
               </a>
             </div>
-            <div className="sectionText">s</div>
+            <div className="text-3xl text-left md:text-center">
+              The structural and logistical commitment of our South African
+              partners, and the enormous impact on rural school education, makes
+              this an excellent project for effective sponsorship. The aid is
+              efficient, specific, targeted, and relevant.
+            </div>
           </div>
         </div>
+
+        <div className="sectionHeader">Thank you for your support!</div>
       </div>
     </>
   );

@@ -21,7 +21,7 @@ export default function About() {
             <p className="sectionText">
               In 2001,{" "}
               <a
-                className="link"
+                className="link text-tabTheme-100"
                 href="https://www.punahou.edu/"
                 target={"_blank"}
               >
