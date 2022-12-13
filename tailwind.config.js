@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        tabTheme: {
+          100: "#2B6798",
+          200: "#003166",
+        },
+      },
       screens: {
         md: "887px",
       },
@@ -15,5 +21,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui"), require("@headlessui/tailwindcss")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("daisyui"),
+    require("@headlessui/tailwindcss"),
+  ],
 };

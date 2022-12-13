@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -90,33 +91,16 @@ export default function Home() {
             quickly, efficiently, and effectively to appropriately serve the
             long-neglected majority population of school children.
           </p>
-          <p>
-            In 2001, Punahou School (Hawaii) and the Cassim Peer Trust (South
-            Africa) co-sponsored an international professional development
-            project that sent a team of high school math and science teachers to
-            South Africa to conduct curriculum-specific workshops with their
-            South African colleagues from rural schools. The success of the
-            pilot project led to more workshops in the following years, funded
-            by grassroots community support in the USA and South Africa. 2016
-            will mark the 16th year of the Project.Workshop content is designed
-            to meet and exceed the standards of the Curriculum and Assessment
-            Policy Statement (CAPS). Without upgrading the skills of educators
-            in rural schools in South Africa, students have little hope of
-            getting a chance at higher education. More than 100 volunteers from
-            the USA have given workshop training to 4500+ South African
-            teachers, and 1.5 million students have benefited from their
-            teachers' upgraded skills in the past 15 years. And ultimately, US
-            students are also the beneficiaries of their own teachers'
-            professional development and life changing experiences in South
-            Africa.In the words of Mr. Y. Chamda, one of the South African
-            administrators of the program,
-          </p>
-          <p>
-            "…to see colleagues from opposite ends of the earth share knowledge
-            and culture with such great warmth and caring, is a sight to behold.
-            This is an example of international cooperation and global
-            understanding at its best."
-          </p>
+          <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-xl leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <span className="text-gray-600">
+              Learn more of our story.{" "}
+              <Link href="/about" className="font-semibold text-indigo-600">
+                <span className="absolute inset-0" aria-hidden="true" />
+                About us <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </span>
+          </div>
+
           <div className="max-w-auto"></div>
         </div>
       </div>

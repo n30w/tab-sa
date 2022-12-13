@@ -55,12 +55,12 @@ export default function Navbar() {
             {/* Close button */}
             <div className="grid grid-cols-1 align-center content-end place-content-between">
               <div
-                className="flex justify-center border-2 border-black rounded-xl py-2 cursor-pointer"
+                className="flex justify-center border-2 border-black rounded-xl py-2 cursor-pointer bg-red-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <button
                   type="button"
-                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black "
                 >
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-10 w-10" aria-hidden="true" />
@@ -73,11 +73,16 @@ export default function Navbar() {
 
       {/* Hide footer when dialog is present */}
       {!mobileMenuOpen && (
-        <footer className="fixed md:hidden w-screen h-screen z-50">
-          <div className="grid h-screen grid-cols-1 content-end">
-            <div className="flex w-full items-center justify-center">
+        <footer
+          className="fixed md:hidden w-full"
+          style={{
+            bottom: "0%",
+          }}
+        >
+          <div className="grid content-end">
+            <div className="flex justify-center">
               <div
-                className="h-auto px-48 pb-7 pt-3 -mb-4 bg-white border-2 border-black rounded-xl text-black text-center text-2xl cursor-pointer"
+                className="h-auto w-auto px-36 pb-7 pt-3 -mb-4 bg-white border-2 border-black rounded-xl text-black text-center text-2xl cursor-pointer"
                 onClick={() => {
                   setMobileMenuOpen(!mobileMenuOpen);
                 }}
