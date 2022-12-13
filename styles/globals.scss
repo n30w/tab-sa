@@ -26,6 +26,11 @@
   line-height: 1.4;
 }
 
+textarea {
+  @apply text-2xl
+}
+
+
 @layer base {
   html {
     scrollbar-gutter: stable;

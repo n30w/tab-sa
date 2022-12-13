@@ -74,7 +74,7 @@ export default function Navbar() {
       {/* Hide footer when dialog is present */}
       {!mobileMenuOpen && (
         <footer
-          className="fixed md:hidden w-full"
+          className="fixed md:hidden w-full z-50"
           style={{
             bottom: "0%",
           }}
