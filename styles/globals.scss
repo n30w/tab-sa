@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .page {
   @apply container mx-auto font-atkinson
@@ -18,11 +19,11 @@
 }
 
 .sectionHeader {
-  @apply text-left md:text-center font-bold text-5xl text-tabTheme-200 px-4 md:px-16
+  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-tabTheme-200 px-4 md:px-16
 }
 
 .sectionText {
-  @apply text-2xl sm:text-3xl text-left py-4 leading-relaxed;
+  @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-0 2xl:px-48;
   line-height: 1.4;
 }
 

@@ -18,6 +18,7 @@ module.exports = {
       fontFamily: {
         asap: ["asap", "sans-serif"],
         atkinson: ['"Atkinson Hyperlegible"', "sans-serif"],
+        overpass: ["overpass", "sans-serif"],
       },
     },
   },

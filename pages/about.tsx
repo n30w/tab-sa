@@ -1,4 +1,5 @@
 import Head from "next/head";
+import SponsorMosaic from "../components/about/sponsorMosaic";
 
 export default function About() {
   return (
@@ -10,7 +11,9 @@ export default function About() {
       </Head>
       <div className="page">
         <div className="content">
-          <div className="sectionHeader">About Us</div>
+          <div className="sectionHeader">
+            <h1>About Us</h1>
+          </div>
           <div className="sectionContent">
             <p className="sectionText">
               Our mission is to assist teachers of math and science in rural
@@ -36,15 +39,13 @@ export default function About() {
               community support in the USA and South Africa.
             </p>
             <p className="sectionText">
-              Our workshop content is designed to meet and exceed the standards
-              of the Curriculum and Assessment Policy Statement, or CAPS.
               Without upgrading the skills of educators in rural schools in
               South Africa, students have little hope of getting a chance at
               higher education. More than 100 volunteers from the USA have given
               workshop training to over 4,500 South African teachers,
-              benefitting 1.5 million students in the past 15 years. US students
+              benefitting 1.5 million students in the past 20 years. US students
               also benefit from their own teachers' professional development and
-              life changing experiences in South Africa. In the words of one of
+              life-changing experiences in South Africa. In the words of one of
               the South African administrators of the program Mr. Y. Chamda:
             </p>
             <p className="sectionText">
@@ -55,6 +56,8 @@ export default function About() {
             </p>
           </div>
 
+          <div className="divider pb-12"></div>
+
           <div className="sectionHeader">Sponsors</div>
           <div className="sectionContent">
             <div className="sectionText">
@@ -62,12 +65,23 @@ export default function About() {
               schools, and friends in many countries. We couldn't do this
               without you!
             </div>
-            <div></div>
-          </div>
 
-          <div className="sectionHeader">Articles</div>
-          <div className="sectionContent">
-            <div className="sectionText">Articles we've been featured in</div>
+            <SponsorMosaic />
+
+            <div className="divider pb-12"></div>
+
+            <div className="sectionHeader">Articles</div>
+            <div className="sectionContent">
+              <div className="sectionText">Articles we've been featured in</div>
+              <div>
+                <a
+                  target="_blank"
+                  href="https://westoahu.hawaii.edu/ekamakanihou/?p=6164"
+                >
+                  UH West Oahu
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

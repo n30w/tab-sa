@@ -28,6 +28,7 @@ export default function Navbar() {
         {/* Tablet and Desktop Navbar */}
         <FullWidthNavbar navigation={navigation} />
 
+        {/* Mobile navbar */}
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <Dialog.Panel
             //@ts-ignore
@@ -35,7 +36,7 @@ export default function Navbar() {
             className="fixed inset-0 z-10 overflow-y-auto bg-white px-6  md:hidden font-atkinson"
           >
             {/* Menu buttons */}
-            <div className="my-2 flow-root justify-between">
+            <div className="my-2 flow-root justify-between ring-0">
               <div className="divide-gray-500/10">
                 <div className="space-y-4">
                   {navigation.map((item) => (

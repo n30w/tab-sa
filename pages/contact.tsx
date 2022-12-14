@@ -2,16 +2,18 @@ export default function Contact() {
   return (
     <>
       <div className="font-atkinson">
-        <div className="sectionHeader">Let's get in touch.</div>
+        <div className="sectionHeader">
+          <h1>Let's get in touch.</h1>
+        </div>
         <div className="sectionContent">
-          <h1 className="text-3xl text-left md:text-center pt-9 text-black">
+          <h2 className="text-3xl text-left md:text-center pt-9 text-black">
             Send us a message by filling in the boxes below.
-          </h1>
+          </h2>
         </div>
         <div className="flex flex-col items-center justify-center">
           <div className="w-full">
             <div className="grid grid-cols-1 gap-6 justify-items-center">
-              <label className="block w-72">
+              <label className="block w-80 md:w-96">
                 <span className="text-black text-xl">Full name</span>
                 <input
                   type="text"
@@ -22,14 +24,14 @@ export default function Contact() {
                     block
                     w-full
                     rounded-md
-                    bg-gray-100
+                    bg-white
                     border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
+                    border-black focus:ring-0
                   "
                   placeholder=""
                 />
               </label>
-              <label className="block w-72">
+              <label className="block w-80 md:w-96">
                 <span className="text-black text-xl">Email address</span>
                 <input
                   type="email"
@@ -40,11 +42,11 @@ export default function Contact() {
                     block
                     w-full
                     rounded-md
-                    bg-gray-100
+                    bg-white
                     border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
+                    border-black focus:ring-0
                   "
-                  placeholder="youremail@example.com"
+                  placeholder=""
                 />
               </label>
 
@@ -58,9 +60,9 @@ export default function Contact() {
                     md:w-96
                     h-80
                     rounded-md
-                    bg-gray-100
+                    bg-white
                     border-transparent
-                    focus:border-gray-500 focus:bg-white focus:ring-0
+                    border-black focus:ring-0
                   "
                   rows={3}
                 ></textarea>

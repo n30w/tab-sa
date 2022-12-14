@@ -25,9 +25,9 @@ export default function Home() {
                   Southern Africa
                 </h1>
                 <div className="xs:h-3 sm:h-6"></div>
-                <h1 className="text-2xl tracking-tight text-center sm:text-3xl font-atkinson font-weight-400 ">
+                <h2 className="text-2xl tracking-tight text-center sm:text-3xl font-atkinson font-weight-400 ">
                   Changing communities through education
-                </h1>
+                </h2>
 
                 {/* <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure

@@ -9,7 +9,7 @@ export default function donationBoxes() {
           className="cursor-pointer"
           target={"_blank"}
         >
-          <div className="grid grid-cols-2 place-items-center flex-grow h-44 w- card rounded-box text-white  bg-tabTheme-200">
+          <div className="grid grid-cols-2 place-items-center flex-grow h-60 card rounded-box text-white bg-tabTheme-200">
             <div className="flex flex-col justify-between space-y-2 items-center px-2">
               <div className="text-2xl 2xl:text-4xl font-bold text-center tracking-wide">
                 Givebox
@@ -17,16 +17,19 @@ export default function donationBoxes() {
               <ComputerDesktopIcon className=":w-20 h-20" />
             </div>
             <div className="flex justify-center text-xl md:text-2xl px-2">
-              Givebox is an online donation service for non-profit fundraising.
+              <p>
+                Givebox is an online donation service for non-profit
+                fundraising.
+              </p>
             </div>
           </div>
         </a>
         <div className="divider lg:divider-horizontal">OR</div>
         <a href="" className="cursor-pointer" target={"_blank"}>
-          <div className="grid grid-cols-2 place-items-center flex-grow h-44 w-full card rounded-box text-white  bg-tabTheme-100">
+          <div className="grid grid-cols-2 place-items-center flex-grow h-60 w-full card rounded-box text-white  bg-tabTheme-100">
             <div className="flex flex-col justify-between space-y-2 items-center px-2">
               <div className="text-2xl 2xl:text-4xl text-center font-bold tracking-wide">
-                Mail-in Form
+                <p>Mail-in Form</p>
               </div>
               <PrinterIcon className="h-20 w-20" />
             </div>

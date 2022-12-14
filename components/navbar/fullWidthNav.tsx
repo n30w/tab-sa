@@ -17,7 +17,7 @@ export default function FullWidthNavbar({ navigation }: any) {
                 <Link
                   className={`btn text-black ${
                     router.pathname === item.href
-                      ? "bg-[#FFB612] text-white hover:bg-[#FFB612]"
+                      ? "bg-[#FFB612] hover:bg-[#FFB612]"
                       : "bg-white hover:bg-[#ffeaba]"
                   }`}
                   key={item.name}
