@@ -14,7 +14,25 @@ export default function Contact() {
           <div className="w-full">
             <div className="grid grid-cols-1 gap-6 justify-items-center">
               <label className="block w-80 md:w-96">
-                <span className="text-black text-xl">Full name</span>
+                <span className="text-black text-xl">First name</span>
+                <input
+                  type="text"
+                  className="
+                    mt-1
+                    text-xl
+                    md:text-2xl
+                    block
+                    w-full
+                    rounded-md
+                    bg-white
+                    border-transparent
+                    border-black focus:ring-0
+                  "
+                  placeholder=""
+                />
+              </label>
+              <label className="block w-80 md:w-96">
+                <span className="text-black text-xl">Last name</span>
                 <input
                   type="text"
                   className="
@@ -49,7 +67,6 @@ export default function Contact() {
                   placeholder=""
                 />
               </label>
-
               <label className="block">
                 <span className="text-black text-xl">Message</span>
                 <textarea
