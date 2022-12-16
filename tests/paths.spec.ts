@@ -18,7 +18,7 @@ test.describe('Navbar', () => {
             await page.goto('/');
             await page.click(p.pageText);
             await expect(page).toHaveURL(p.url);
-            await expect(page.locator(p.locator)).toContainText(p.contains);
+            await expect(page.locator(p.locator).first()).toContainText(p.contains);
         })
     })
 });
