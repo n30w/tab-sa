@@ -1,7 +1,6 @@
 import Head from "next/head";
 import SponsorMosaic from "../components/about/sponsorMosaic";
 import StaffGrid from "../components/about/staffGrid";
-import StaffGrid2 from "../components/about/staffGrid2";
 
 export default function About() {
   return (
