@@ -21,13 +21,5 @@ test.describe('Navbar', () => {
             await expect(page.locator(p.locator)).toContainText(p.contains);
         })
     })
-
 });
 
-test('check if Givebox site still exists', async ({ page }) => {
-
-  await page.goto('https://givebox.com/517849');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle('SOUTH AFRICA PROGRAM | Teachers Across Borders');
-});

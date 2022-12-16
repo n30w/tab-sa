@@ -1,5 +1,7 @@
 import Head from "next/head";
 import SponsorMosaic from "../components/about/sponsorMosaic";
+import StaffGrid from "../components/about/staffGrid";
+import StaffGrid2 from "../components/about/staffGrid2";
 
 export default function About() {
   return (
@@ -57,8 +59,16 @@ export default function About() {
           </div>
 
           <div className="divider pb-12"></div>
+          <div className="sectionHeader">
+            <h1>Leadership</h1>
+          </div>
+          <StaffGrid />
 
-          <div className="sectionHeader">Sponsors</div>
+          <div className="divider py-12"></div>
+
+          <div className="sectionHeader">
+            <h1>Sponsors</h1>
+          </div>
           <div className="sectionContent">
             <div className="sectionText">
               TAB-SA thanks our countless sponsors in the local communities,
@@ -70,7 +80,9 @@ export default function About() {
 
             <div className="divider pb-12"></div>
 
-            <div className="sectionHeader">Articles</div>
+            <div className="sectionHeader">
+              <h1>Articles</h1>
+            </div>
             <div className="sectionContent">
               <div className="sectionText">Articles we've been featured in</div>
               <div>

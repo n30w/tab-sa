@@ -18,8 +18,20 @@
   @apply text-2xl text-left px-4 md:px-16 pb-14
 }
 
+// .sectionHeader {
+//   @apply text-left md:text-center font-bold text-3xl md:text-5xl text-tabTheme-200 px-4 md:px-16
+// }
+
+.tabGradientR {
+  @apply bg-gradient-to-r from-tabTheme-200 to-tabTheme-100;
+}
+
+.tabGradientText {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-tabTheme-200 to-tabTheme-100;
+}
+
 .sectionHeader {
-  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-tabTheme-200 px-4 md:px-16
+  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 md:px-16 select-none;
 }
 
 .sectionText {
@@ -70,9 +82,4 @@ textarea {
     text-transform: "none";
     font-weight: 400;
   }
-  // nav a {
-  //   width: 10vw;
-  //   display: inline-block;
-  // }
-
 }

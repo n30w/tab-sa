@@ -6,32 +6,26 @@ export default function sponsorMosaic() {
       <div className="py-14 grid grid-cols-1 2xl:grid-cols-3 content-start justify-items-center text-center">
         <div className="flex flex-wrap w-auto md:flex-row px-9 items-center text-left justify-evenly space-y-2 space-x-2">
           <div className="grid h-80 flex-grow justify-items-center pt-3">
-            <div
-              className="card border-tabTheme-200 py-auto px-4 py-6 mx-3"
-              style={{
-                borderWidth: "8px",
-              }}
-            >
-              <h3 className="text-3xl font-bold text-tabTheme-200">
-                The Cassim Peer Trust
-              </h3>
-              <h4>in South Africa</h4>
-              <p className="pt-2">Information about this sponsor</p>
+            <div className="card tabGradientR py-auto px-3 py-3 mx-3">
+              <div className="bg-white rounded-lg px-4 py-4 h-full w-full">
+                <h3 className="text-3xl font-bold text-tabTheme-200">
+                  The Cassim Peer Trust
+                </h3>
+                <h4>in South Africa</h4>
+                <p className="pt-2">Information about this sponsor</p>
+              </div>
             </div>
           </div>
 
           <div className="grid h-80 flex-grow justify-items-center">
-            <div
-              className="card border-tabTheme-200 py-auto px-4 py-6 mx-3"
-              style={{
-                borderWidth: "8px",
-              }}
-            >
-              <h3 className="text-3xl font-bold text-tabTheme-200">
-                Sheridan and Julia Ing Family Foundation
-              </h3>
-              <h4>in Honolulu, Hawaii</h4>
-              <p className="pt-2">Information about this sponsor</p>
+            <div className="card tabGradientR py-auto px-3 py-3 mx-3">
+              <div className="bg-white rounded-lg px-4 py-4 h-full w-full">
+                <h3 className="text-3xl font-bold text-tabTheme-200">
+                  Sheridan and Julia Ing Foundation
+                </h3>
+                <h4>in Honolulu, Hawaii</h4>
+                <p className="pt-2">Information about this sponsor</p>
+              </div>
             </div>
           </div>
         </div>
