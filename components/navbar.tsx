@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import DesktopTitle from "./navbar/fullTitle";
 import FullWidthNavbar from "./navbar/fullWidthNav";
 
-const navigation = [
+export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },

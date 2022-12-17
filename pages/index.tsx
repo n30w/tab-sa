@@ -14,14 +14,14 @@ export default function Home() {
           <div className="mx-auto max-w-auto pt-28 pb-36 sm:pt-60 sm:pb-60 md:pt-48 sm:pb-84 2xl:h-screen">
             <div>
               <div className="flex justify-center">
-                <img
-                  src="/Landing.svg"
-                  className="2xl:scale-150 2xl:pt-12"
-                ></img>
+                <img src="/Logo.svg" className="2xl:scale-150 2xl:pt-12"></img>
               </div>
               <div className="flex flex-col justify-center space-y-2 pt-7">
                 <div className="h-7 2xl:h-28"></div>
-                <h1 className="text-4xl tracking-normal text-center sm:text-6xl 2xl:text-8xl font-atkinson">
+                <h1 className="text-4xl tracking-normal text-center sm:text-6xl 2xl:text-8xl font-atkinson font-bold">
+                  Teachers Across Borders
+                </h1>
+                <h1 className="text-3xl tracking-normal text-center sm:text-4xl 2xl:text-8xl font-atkinson">
                   Southern Africa
                 </h1>
                 <div className="xs:h-3 sm:h-6"></div>
