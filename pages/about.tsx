@@ -2,7 +2,7 @@ import Head from "next/head";
 import SponsorMosaic from "../components/about/sponsorMosaic";
 import StaffGrid from "../components/about/staffGrid";
 
-export default function About() {
+export default function About({ staff }: any) {
   return (
     <>
       <Head>
@@ -61,7 +61,7 @@ export default function About() {
           <div className="sectionHeader">
             <h1>Leadership</h1>
           </div>
-          <StaffGrid />
+          <StaffGrid staff={staff.docs[0].pageLayouts.about.order} />
 
           <div className="divider py-12"></div>
 
@@ -98,4 +98,19 @@ export default function About() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  // TODO make this have a different address when in development vs production via env variables
+  const res = await fetch(
+    "http://localhost:4000/api/pages?where[title][equals]=About"
+  );
+  const staff = await res.json();
+
+  return {
+    props: {
+      staff,
+      revalidate: 10,
+    },
+  };
 }

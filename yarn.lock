@@ -1321,6 +1321,21 @@
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/slate-react@^0.50.1":
+  version "0.50.1"
+  resolved "https://registry.yarnpkg.com/@types/slate-react/-/slate-react-0.50.1.tgz#37407c83002d7b0920a17a5569f7e89670cc58dd"
+  integrity sha512-Mm0KKNRYAj+vHrNXSjICzOgNXgm66rbh9NaSf1WvBBL6oRIeoJJeceMenZP7NDVwLokd7fBuRsn7jSRzT9Z/4Q==
+  dependencies:
+    slate-react "*"
+
+"@types/slate@^0.47.11":
+  version "0.47.11"
+  resolved "https://registry.yarnpkg.com/@types/slate/-/slate-0.47.11.tgz#41a694e5d7a7f6be13a69b314f62bd60d6f306ae"
+  integrity sha512-wQ09e75s8n9B7MQWxDwwR1AhwRu/yyl//GEonqV5mrPipoXsEnBE99FWpWYCaClPLzDElfrla5YQyRzyOSlViA==
+  dependencies:
+    "@types/react" "*"
+    immutable "^3.8.2"
+
 acorn-node@^1.8.2:
   version "1.8.2"
   resolved "https://registry.npmjs.org/acorn-node/-/acorn-node-1.8.2.tgz"
@@ -1803,6 +1818,11 @@ immer@^9.0.6:
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.16.tgz#8e7caab80118c2b54b37ad43e05758cdefad0198"
   integrity sha512-qenGE7CstVm1NrHQbMh8YaSzTZTFNP3zPqr3YU0S0UY441j4bJTg4A2Hh5KAhwgaiU6ZZ1Ar6y/2f4TblnMReQ==
 
+immutable@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
+  integrity sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg==
+
 immutable@^4.0.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/immutable/-/immutable-4.1.0.tgz"
@@ -2266,7 +2286,7 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-slate-react@^0.87.1:
+slate-react@*, slate-react@^0.87.1:
   version "0.87.1"
   resolved "https://registry.yarnpkg.com/slate-react/-/slate-react-0.87.1.tgz#9dfd133f148c3a3337bd58c3d71cbcffce37aeac"
   integrity sha512-ubVKLZ6UVdZEZrvdJbqR9V5bITn7lcn2g6oJ7TtBDGRea19G/Lqtzp2srPm9fxus0EqMBExNCqA/LZlVW4Y+hg==
