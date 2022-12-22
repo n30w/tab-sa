@@ -35,15 +35,11 @@ export default function staffGrid({ staff }: any) {
               <h2 className="text-2xl 2xl:text-5xl">{p.staff.lastName}</h2>
             </div>
             <div className="flex flex-col space-x-4 py-3 justify-center items-center">
-              <div className="w-72">
-                {/* <img
-                  src={p.staff.image.url}
-                  className="object-cover w-96 h-96 px-4 select-none grayscale"
-                  alt={`${p.staff.firstName} ${p.staff.lastName}`}
-                /> */}
+              <div className="w-72 overflow-hidden rounded-xl">
                 <Image
                   src={p.staff.image.url}
-                  fill
+                  height={500}
+                  width={500}
                   className="object-cover w-96 h-96 px-4 select-none grayscale"
                   alt={`${p.staff.firstName} ${p.staff.lastName}`}
                 />
