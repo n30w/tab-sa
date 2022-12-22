@@ -56,8 +56,6 @@ const serialize = (children) =>
         );
 
       default:
-        console.log(i);
-        console.log(node.children[0].text);
         return (
           <p
             key={i}
