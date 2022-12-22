@@ -10,6 +10,22 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "tab-sa-cms.org",
+        port: "",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "4000",
+        pathname: "/media/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

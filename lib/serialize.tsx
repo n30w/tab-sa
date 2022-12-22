@@ -53,9 +53,9 @@ const serialize = (children) =>
 
       default:
         return (
-          <p key={i} className="sectionText">
+          <div key={i} className="sectionText">
             {serialize(node.children)}
-          </p>
+          </div>
         );
     }
   });

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function staffGrid({ staff }: any) {
   // const staff = [
   //   {
@@ -34,8 +36,14 @@ export default function staffGrid({ staff }: any) {
             </div>
             <div className="flex flex-col space-x-4 py-3 justify-center items-center">
               <div className="w-72">
-                <img
+                {/* <img
                   src={p.staff.image.url}
+                  className="object-cover w-96 h-96 px-4 select-none grayscale"
+                  alt={`${p.staff.firstName} ${p.staff.lastName}`}
+                /> */}
+                <Image
+                  src={p.staff.image.url}
+                  fill
                   className="object-cover w-96 h-96 px-4 select-none grayscale"
                   alt={`${p.staff.firstName} ${p.staff.lastName}`}
                 />
