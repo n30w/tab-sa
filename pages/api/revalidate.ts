@@ -11,8 +11,18 @@ export default async function handler(
   }
 
   try {
-    // this should be the actual path not a rewritten path
-    // e.g. for "/blog/[slug]" this should be "/blog/post-1"
+    /*
+     ** the res.query.path comes from res.query, which is just
+     ** accessing the entire query string, and the .path comes
+     ** from the actual name of the thing we want. In this case,
+     ** the query we would be receiving is something like
+     ** "http://domainname.com/api/revalidate?secret=......&path=..."
+     ** The path part is the .path part of that URL. If there were any
+     ** other query parameters, they can be accessed similarly like an object property
+     ** using the . (dot)
+     ** Chaining queries is simple. Just use &.
+     ** Checkout this article on queries: https://upmostly.com/nextjs/how-to-parse-query-string-parameters-in-next-js
+     */
     await res.revalidate(`/${req.query.path}`);
     return res.json({ revalidated: true });
   } catch (err) {

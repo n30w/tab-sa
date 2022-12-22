@@ -103,7 +103,7 @@ export default function About({ staff }: any) {
 export async function getStaticProps() {
   // TODO make this have a different address when in development vs production via env variables
   const res = await fetch(
-    "http://localhost:4000/api/pages?where[title][equals]=About"
+    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/pages?where[title][equals]=About`
   );
   const staff = await res.json();
 

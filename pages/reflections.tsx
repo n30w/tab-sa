@@ -22,7 +22,9 @@ export default function Reflections({ posts }: any) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:4000/api/posts");
+  require("dotenv").config();
+
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
   const posts = await res.json();
 
   return {
