@@ -34,6 +34,10 @@ const serialize = (children) =>
       case "h1":
         return <h1 key={i}>{serialize(node.children)}</h1>;
       // Iterate through all headings here...
+      // case "h2":
+      //   return <h2 key={i}>{serialize(node.children)}</h2>;
+      // case "h3":
+      //   return <h3 key={i}>{serialize(node.children)}</h3>;
       case "h6":
         return <h6 key={i}>{serialize(node.children)}</h6>;
       case "quote":
@@ -52,10 +56,15 @@ const serialize = (children) =>
         );
 
       default:
+        console.log(i);
+        console.log(node.children[0].text);
         return (
-          <div key={i} className="sectionText">
+          <p
+            key={i}
+            className={node.children[0].text === "" ? "" : "sectionText"}
+          >
             {serialize(node.children)}
-          </div>
+          </p>
         );
     }
   });

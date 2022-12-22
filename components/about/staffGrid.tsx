@@ -1,26 +1,6 @@
 import Image from "next/image";
 
 export default function staffGrid({ staff }: any) {
-  // const staff = [
-  //   {
-  //     first: "Yunus",
-  //     last: "Peer",
-  //     role: "Founder and Director",
-  //     image: "/yunus_peer.png",
-  //   },
-  //   {
-  //     first: "Laurie",
-  //     last: "Lee",
-  //     role: "Assistant Administrator",
-  //     image: "/laurie_lee.png",
-  //   },
-  //   {
-  //     first: "Thokozani",
-  //     last: "Mteshane",
-  //     role: "Assistant Director",
-  //     image: "/thokozani_mteshane.png",
-  //   },
-  // ];
   return (
     <>
       {/* <div>{staff.role}</div> */}

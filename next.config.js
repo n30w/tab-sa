@@ -15,7 +15,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "tab-sa-cms.org",
-        port: "",
         pathname: "/media/**",
       },
       {
