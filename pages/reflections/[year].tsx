@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 
 export default function year({ posts, year }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="page">
@@ -9,13 +9,13 @@ export default function year({ posts, year }) {
           <div className="sectionHeader">
             <h1>Reflections from {year}</h1>
           </div>
-          {/* <div className="sectionContent">
+          <div className="sectionContent">
             <ul>
               {posts.docs.map((post) => {
-                <li>{post.author}</li>;
+                return <li>{post.author}</li>;
               })}
             </ul>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

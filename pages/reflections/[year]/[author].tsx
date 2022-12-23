@@ -1,39 +1,34 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import serialize from "../../../lib/serialize";
+import qs from "qs";
 
-export default function author({ posts }: any) {
+export default function author({ post }: any) {
   return (
     <>
       <div className="page">
         <div className="content">
           <div className="sectionHeader">
-            <h1>Reflections</h1>
+            <h1>{post.docs[0].author}</h1>
           </div>
-          {posts.docs.map((p) => (
-            <div className="sectionContent">
-              {/* Year */}
-              <h2>{p.category[0].name}</h2>
-              {/* Author of reflection */}
-              <h3>{p.author}</h3>
-              {/* Body of reflection, from rich text */}
-              <div className="">{serialize(p.body)}</div>
-            </div>
-          ))}
+          <div className="sectionContent">
+            <h2>{post.docs[0].category.name}</h2>
+            <div className="">{serialize(post.docs[0].body)}</div>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch(
-    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/categories`
-  );
-  const categories = await res.json();
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const posts = await res.json();
 
-  const paths = categories.docs.map((cat) => ({
+  const paths = posts.docs.map((post) => ({
     params: {
-      name: cat.name,
+      year: post.category.name,
+      // author: post.author.replace(/\s/g, "").toLowerCase(),
+      author: post.author,
     },
   }));
 
@@ -41,20 +36,44 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false, // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
   };
-};
+}
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // require("dotenv").config();
+export async function getStaticProps({ params }) {
+  const query = {
+    author: {
+      equals: params.author,
+    },
+    and: [
+      {
+        category: {
+          name: {
+            equals: params.year,
+          },
+        },
+      },
+    ],
+  };
+
+  const stringifiedQuery = qs.stringify(
+    {
+      where: query,
+    },
+    { addQueryPrefix: true }
+  );
 
   const res = await fetch(
-    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts?category=${params?.name}&author=${params?.author}`
+    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
   );
-  const posts = await res.json();
+
+  const post = await res.json();
+
+  // console.log(stringifiedQuery);
+  // console.log(post);
 
   return {
     props: {
-      posts,
+      post,
       // revalidate: 10,
     },
   };
-};
+}
