@@ -28,6 +28,14 @@ export default function Donate() {
               this an excellent project for effective sponsorship. The aid is
               efficient, specific, targeted, and relevant.
             </div>
+            <div className="text-xl text-left md:text-center pt-12 px-1 md:px-52">
+              <p>
+                As required by the Internal Revenue Code, there were no goods
+                and services provided to you in consideration for this gift. As
+                a non-profit corporation under the Tax Code Section 501(c)(3),
+                all contributions are fully tax deductible.
+              </p>
+            </div>
           </div>
         </div>
 
