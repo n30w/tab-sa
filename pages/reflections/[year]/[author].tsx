@@ -8,11 +8,12 @@ export default function author({ post }: any) {
       <div className="page">
         <div className="content">
           <div className="sectionHeader">
-            <h1>{post.docs[0].author}</h1>
+            <h1>
+              {post.author} {post.category.name}
+            </h1>
           </div>
           <div className="sectionContent">
-            <h2>{post.docs[0].category.name}</h2>
-            <div className="">{serialize(post.docs[0].body)}</div>
+            <div className="">{serialize(post.body)}</div>
           </div>
         </div>
       </div>
@@ -45,10 +46,8 @@ export async function getStaticProps({ params }) {
     },
     and: [
       {
-        category: {
-          name: {
-            equals: params.year,
-          },
+        "category.name": {
+          equals: params.year,
         },
       },
     ],
@@ -59,7 +58,9 @@ export async function getStaticProps({ params }) {
       where: query,
     },
     { addQueryPrefix: true }
-  );
+  ); // Output: ?where[author][equals]=Lyla Berg&where[and][0][category][name][equals]=2009
+
+  console.log(stringifiedQuery);
 
   const res = await fetch(
     `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
@@ -67,12 +68,11 @@ export async function getStaticProps({ params }) {
 
   const post = await res.json();
 
-  // console.log(stringifiedQuery);
   // console.log(post);
 
   return {
     props: {
-      post,
+      post: post.docs[0],
       // revalidate: 10,
     },
   };
