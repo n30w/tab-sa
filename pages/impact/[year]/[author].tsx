@@ -6,14 +6,18 @@ export default function author({ post }: any) {
   return (
     <>
       <div className="page">
-        <div className="content">
-          <div className="sectionHeader">
-            <h1>
-              {post.author} {post.category.name}
-            </h1>
+        <div className="sectionHeader">
+          <h1>{post.title}</h1>
+        </div>
+        <div className="grid grid-cols-5">
+          <div className="col-span-1 justify-self-center">
+            More impact from {post.category.name}
           </div>
-          <div className="sectionContent">
-            <div className="">{serialize(post.body)}</div>
+          <div className="col-span-3">
+            <p className="text-center font-serif">{post.author}</p>
+            <div className="2">
+              <div className="">{serialize(post.body, "impact")}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -60,15 +64,13 @@ export async function getStaticProps({ params }) {
     { addQueryPrefix: true }
   ); // Output: ?where[author][equals]=Lyla Berg&where[and][0][category][name][equals]=2009
 
-  console.log(stringifiedQuery);
+  // console.log(stringifiedQuery);
 
   const res = await fetch(
     `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
   );
 
   const post = await res.json();
-
-  // console.log(post);
 
   return {
     props: {

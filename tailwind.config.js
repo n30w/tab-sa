@@ -19,6 +19,7 @@ module.exports = {
         asap: ["asap", "sans-serif"],
         atkinson: ['"Atkinson Hyperlegible"', "sans-serif"],
         overpass: ["overpass", "sans-serif"],
+        plex: ["Plex", "sans-serif", "serif"],
       },
     },
   },

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap');
 // p {
 //   @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-0 2xl:px-48
 // }
@@ -16,6 +16,10 @@
 
 .content {
   @apply flex flex-col justify-center text-center space-y-4
+}
+
+.impactContent {
+  @apply grid-cols-5 text-center gap-2 pt-4
 }
 
 .sectionContent {
@@ -35,11 +39,16 @@
 }
 
 .sectionHeader {
-  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 md:px-16 select-none;
+  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 pb-4 md:px-16 select-none;
 }
 
 .sectionText {
   @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-0 2xl:px-48;
+  line-height: 1.4;
+}
+
+.impactText {
+  @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-4 font-plex font-serif;
   line-height: 1.4;
 }
 

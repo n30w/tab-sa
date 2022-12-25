@@ -35,7 +35,7 @@ export default function sponsorMosaic() {
             <div className="grid flex-grow justify-items-center pt-4">
               <div className="h-60 card bg-[#052057] px-9 py-4">
                 <img
-                  src="/punahoulogo.png"
+                  src="/about/punahoulogo.png"
                   alt="Punahou School"
                   className="w-40 h-40"
                 />
@@ -49,7 +49,7 @@ export default function sponsorMosaic() {
             <div className="grid flex-grow justify-items-center place-items-center">
               <div className="h-60 w-50 card bg-[#c8102e] px-2 py-8">
                 <img
-                  src="/iolanilogo.svg"
+                  src="/about/iolanilogo.svg"
                   alt="Iolani School"
                   className="w-50 h-50"
                 />
@@ -63,7 +63,7 @@ export default function sponsorMosaic() {
                 style={{ borderWidth: 6 }}
               >
                 <img
-                  src="/exeterlogo.png"
+                  src="/about/exeterlogo.png"
                   alt="Phillips Exeter Academy"
                   className="w-50 h-50"
                 />
@@ -80,7 +80,7 @@ export default function sponsorMosaic() {
               className="px-10 py-10"
             >
               <img
-                src="/fcrlogo.svg"
+                src="/about/fcrlogo.svg"
                 alt="First Car Rental Logo"
                 // style={{ scale: "150%" }}
               />
@@ -89,7 +89,7 @@ export default function sponsorMosaic() {
           <div className="grid flex-grow justify-items-center">
             <a href="https://www.education.gov.za/" target={"_blank"}>
               <img
-                src="/southafricadoelogo.png"
+                src="/about/southafricadoelogo.png"
                 alt="South Africa Department of Education"
               />
             </a>

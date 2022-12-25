@@ -1,16 +1,22 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import serialize from "../lib/serialize";
 
-export default function Reflections({ posts }: any) {
+export default function Impact({ posts }: any) {
   return (
     <>
       <div className="page">
         <div className="content">
           <div className="sectionHeader">
-            <h1>Reflections</h1>
+            <h1>Impact</h1>
           </div>
 
-          {/* <div>{posts.map()}</div> */}
+          <div className="sectionContent">
+            <p className="sectionText">
+              View reflections, speeches, or letters demonstrating the impacts
+              of our organization on the teachers, leaders, and communities
+              involved in our program.
+            </p>
+          </div>
         </div>
       </div>
     </>

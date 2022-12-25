@@ -10,7 +10,7 @@ export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
-  { name: "Reflections", href: "/reflections" },
+  { name: "Impact", href: "/impact" },
   { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
   { name: "Donate", href: "/donate" },
