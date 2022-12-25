@@ -56,6 +56,22 @@ textarea {
   @apply text-2xl
 }
 
+div.stick {
+  @apply rounded-lg  ;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 180px;
+  // border: 2px solid #4CAF50;
+}
+
+.growBox {
+  flex-grow: 1
+}
+
+.growBox:hover {
+  flex-grow: 3
+}
 
 @layer base {
   html {
