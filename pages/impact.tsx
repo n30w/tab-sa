@@ -40,7 +40,8 @@ export default function Impact({ posts }: any) {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   require("dotenv").config();
 
-  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  // const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const res = await fetch(`http://payload:4000/api/posts`);
   const posts = await res.json();
 
   return {

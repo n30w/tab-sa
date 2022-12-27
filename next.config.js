@@ -10,6 +10,13 @@ const nextConfig = {
 
     return config;
   },
+  // webpackDevMiddleware: (config) => {
+  //   config.watchOptions = {
+  //     poll: 1000,
+  //     aggregateTimeout: 300,
+  //   };
+  //   return config;
+  // },
   images: {
     remotePatterns: [
       {
@@ -20,6 +27,12 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "localhost",
+        port: "4000",
+        pathname: "/media/**",
+      },
+      {
+        protocol: "http",
+        hostname: "payload",
         port: "4000",
         pathname: "/media/**",
       },

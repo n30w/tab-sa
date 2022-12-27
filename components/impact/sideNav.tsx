@@ -17,7 +17,7 @@ export default function SideNav({ posts, post }) {
               /impact/${post.category.name}`}
           >
             <div
-              className="flex flex-row align-center pb-2 justify-evenly"
+              className="flex flex-row align-center py-2 justify-evenly "
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
@@ -26,23 +26,23 @@ export default function SideNav({ posts, post }) {
                   className={`${
                     isHover
                       ? "opacity-100 ease-in-out duration-200"
-                      : "w-0 opacity-0"
-                  } stroke-2`}
-                  width={30}
-                  height={30}
+                      : "w-0 opacity-0 ease-in-out duration-200"
+                  } stroke-2 `}
+                  width={25}
+                  height={25}
                 ></ArrowLeftIcon>
               </div>
               <h3
-                className={`delay-75 select-none text-3xl text-center duration-300 ease-in-out ${
-                  isHover ? "grow" : "grow-0 w-full"
+                className={`delay-100 select-none text-2xl text-center duration-100 ease-in-out ${
+                  isHover ? "grow w-auto" : "grow-0 w-full"
                 }`}
               >
                 {post.category.name} Impacts
               </h3>
             </div>
           </Link>
-          <div className="px-3 border-2 py-2 rounded-md pt-2 border-black ease-in-out duration-200">
-            <ul className="flex flex-col  justify-self-center space-y-1">
+          <div className="px-1 py-2 rounded-md pt-2 border-black ease-in-out duration-300">
+            <ul className="flex flex-col justify-self-center space-y-1">
               {posts.map((post, i) => {
                 return (
                   <>
@@ -52,15 +52,15 @@ export default function SideNav({ posts, post }) {
                           textDecorationColor: "#FFB612",
                           textDecorationThickness: "3.3px",
                         }}
-                        className={`py-2 transition-opacity duration-100 hover:underline underline-offset-4 px-6 rounded-md ${
+                        className={`py-2 transition-opacity duration-100 hover:underline hover:opacity-100 underline-offset-4 px-6 rounded-md ${
                           decode(router.asPath) ===
                           "/impact/" + post.category.name + "/" + post.author
                             ? "underline"
-                            : ""
+                            : "opacity-50"
                         }`}
                         key={i}
                       >
-                        {post.title}
+                        <span className="text-xl">{post.author}</span>
                       </li>
                     </Link>
                   </>

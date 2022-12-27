@@ -1,4 +1,3 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import serialize from "../../../lib/serialize";
 import qs from "qs";
 import Link from "next/link";

@@ -19,6 +19,7 @@
     "@types/slate": "^0.47.11",
     "@types/slate-react": "^0.50.1",
     "daisyui": "^2.42.1",
+    "dotenv": "^16.0.3",
     "escape-html": "^1.0.3",
     "next": "13.0.6",
     "qs": "^6.11.0",
