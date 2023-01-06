@@ -17,7 +17,7 @@ export default function About({ page }: any) {
             <h1>About Us</h1>
           </div>
           <div className="sectionContent">
-            {serialize(page.docs[0].pageLayouts.about.body)}
+            {serialize(page.docs[0].pageLayouts.about.body, "")}
           </div>
 
           <div className="divider pb-12"></div>
