@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 
   const paths = posts.docs.map((post) => ({
     params: {
-      year: post.category.name,
+      year: post.category.name.toString(),
       // author: post.author.replace(/\s/g, "").toLowerCase(),
       author: post.author,
     },
