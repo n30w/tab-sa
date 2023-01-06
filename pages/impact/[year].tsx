@@ -1,5 +1,6 @@
 import Link from "next/link";
 import qs from "qs";
+import ImpactGrid from "../../components/impact/impactGrid";
 
 export default function year({ posts, year }) {
   return (
@@ -10,17 +11,7 @@ export default function year({ posts, year }) {
             <h1>{year} Impacts</h1>
           </div>
           <div className="sectionContent">
-            <ul>
-              {posts.map((post) => {
-                return (
-                  <>
-                    <Link href={`${year}/${post.author}`}>
-                      <li>{post.author}</li>
-                    </Link>
-                  </>
-                );
-              })}
-            </ul>
+            <ImpactGrid posts={posts} year={year} />
           </div>
         </div>
       </div>
