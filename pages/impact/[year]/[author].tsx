@@ -1,7 +1,6 @@
 import serialize from "../../../lib/serialize";
 import qs from "qs";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import SideNav from "../../../components/impact/sideNav";
@@ -9,7 +8,7 @@ import SideNav from "../../../components/impact/sideNav";
 var decode = require("urldecode");
 
 export default function author({ post, posts }: any) {
-  const router = useRouter();
+  // const router = useRouter();
   return (
     <>
       <div className="page">
@@ -48,8 +47,8 @@ export async function getStaticPaths() {
   const paths = posts.docs.map((post) => ({
     params: {
       year: post.category.name.toString(),
-      // author: post.author.replace(/\s/g, "").toLowerCase(),
       author: post.author,
+      // author: post.author.replace(/\s/g, "").toLowerCase(),
     },
   }));
 
