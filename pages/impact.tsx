@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import serialize from "../lib/serialize";
 
-export default function Impact({ posts }: any) {
+export default function Impact() {
   return (
     <>
       <div className="page">
@@ -16,6 +16,12 @@ export default function Impact({ posts }: any) {
               of our organization on the teachers, leaders, and communities
               involved in our program.
             </p>
+          </div>
+
+          <div className="sectionContent">
+            <div className="card w-full h-96 bg-slate-300">
+              PLACEHOLDER - Javascript Snippet Gallery with Text
+            </div>
           </div>
         </div>
       </div>
@@ -37,17 +43,17 @@ export default function Impact({ posts }: any) {
 //   };
 // };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  require("dotenv").config();
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   require("dotenv").config();
 
-  // const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
-  const res = await fetch(`http://payload:4000/api/posts`);
-  const posts = await res.json();
+//   // const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+//   const res = await fetch(`http://payload:4000/api/posts`);
+//   const posts = await res.json();
 
-  return {
-    props: {
-      posts,
-      // revalidate: 10,
-    },
-  };
-};
+//   return {
+//     props: {
+//       posts,
+//       // revalidate: 10,
+//     },
+//   };
+// };
