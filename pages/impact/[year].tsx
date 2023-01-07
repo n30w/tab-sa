@@ -23,6 +23,28 @@ export async function getStaticPaths() {
   const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
   const posts = await res.json();
 
+  // const yearsAvailable = new Array<string>();
+
+  // const postCategories = posts.docs.map((post) => {
+  //   let id = post.category;
+  //   if (!yearsAvailable.includes(id)) {
+  //     yearsAvailable.push(id);
+  //   }
+  // });
+
+  // // TODO loop over yearsAvailable and do several fetches
+
+  // const res2 = await fetch(
+  //   `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/categories?where[id][equals]=`
+  // );
+  // const cats = await res.json();
+
+  // const paths = cats.docs.map((post) => ({
+  //   params: {
+  //     year: cats.name,
+  //   },
+  // }));
+
   const paths = posts.docs.map((post) => ({
     params: {
       year: post.category.name,
