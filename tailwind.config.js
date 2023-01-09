@@ -7,10 +7,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        teacher: {
+          DEFAULT: "#003166",
+        },
+        student: {
+          DEFAULT: "#2B6789",
+        },
+        south: {
+          DEFAULT: "#FFAB2F",
+        },
+        folderPaper: {
+          DEFAULT: "#FFFFFC",
+        },
+        halt: {
+          DEFAULT: "#FF001E",
+        },
+        port: {
+          DEFAULT: "#454939",
+        },
         tabTheme: {
           100: "#2B6798",
           200: "#003166",
         },
+        white: "#FFFFFC",
       },
       screens: {
         md: "887px",
