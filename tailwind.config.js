@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // fontSize: {
+    //   base: "1rem",
+    //   "2xl": "1.162rem",
+    //   "3xl": "",
+    // },
     extend: {
       colors: {
         teacher: {

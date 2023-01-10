@@ -10,6 +10,11 @@
 //   @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-0 2xl:px-48
 // }
 
+.react-images__view-image--isModal {
+  display: inline-block;
+  left: 50%
+}
+
 .page {
   @apply container mx-auto font-atkinson
 }

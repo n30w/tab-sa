@@ -1,8 +1,9 @@
 import Link from "next/link";
 import qs from "qs";
 import ImpactGrid from "../../components/impact/impactGrid";
+import PhotoGallery from "../../components/impact/photoGallery";
 
-export default function year({ posts, year }) {
+export default function year({ posts, year, media }) {
   return (
     <>
       <div className="page">
@@ -11,6 +12,8 @@ export default function year({ posts, year }) {
             <h1>{year} Impacts</h1>
           </div>
           <div className="sectionContent">
+            {/* <PhotoswipeGallery galleryID={"me"} props={media} /> */}
+            <PhotoGallery photos={media} />
             <ImpactGrid posts={posts} year={year} />
           </div>
         </div>
@@ -23,29 +26,7 @@ export async function getStaticPaths() {
   const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
   const posts = await res.json();
 
-  // const yearsAvailable = new Array<string>();
-
-  // const postCategories = posts.docs.map((post) => {
-  //   let id = post.category;
-  //   if (!yearsAvailable.includes(id)) {
-  //     yearsAvailable.push(id);
-  //   }
-  // });
-
-  // // TODO loop over yearsAvailable and do several fetches
-
-  // const res2 = await fetch(
-  //   `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/categories?where[id][equals]=`
-  // );
-  // const cats = await res.json();
-
-  // const paths = cats.docs.map((post) => ({
-  //   params: {
-  //     year: cats.name,
-  //   },
-  // }));
-
-  const paths = posts.docs.map((post) => ({
+  const paths = posts?.docs.map((post) => ({
     params: {
       year: post.category.name,
     },
@@ -69,15 +50,24 @@ export async function getStaticProps({ params }) {
     },
     { addQueryPrefix: true }
   );
-  const res = await fetch(
-    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
-  );
-  const posts = await res.json();
+
+  const [res1, res2] = await Promise.all([
+    fetch(
+      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
+    ),
+    fetch(
+      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/media${stringifiedQuery}`
+    ),
+  ]);
+
+  const posts = await res1.json();
+  const media = await res2.json();
 
   return {
     props: {
       posts: posts.docs,
       year: params.year,
+      media: media.docs,
     },
   };
 }
