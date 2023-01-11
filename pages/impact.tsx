@@ -25,12 +25,14 @@ export default function Impact({ years }) {
               return (
                 <>
                   <div
-                    className="w-full h-96 rounded-md hover:bg-[#ffeaba] hover:cursor-pointer border-2 border-black"
+                    className="w-full h-20 my-3 rounded-md hover:bg-[#ffeaba] hover:cursor-pointer border-2 border-black"
                     onClick={() => {
                       router.push(`/impact/${year}`);
                     }}
                   >
-                    {year}
+                    <div className="flex flex-col items-center py-4">
+                      <h2 className="text-5xl">{year}</h2>
+                    </div>
                   </div>
                 </>
               );
