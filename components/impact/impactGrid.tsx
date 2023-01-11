@@ -4,7 +4,7 @@ import ImpactCard from "./impactCard";
 export default function impactGrid({ posts, year }) {
   return (
     <>
-      <div className="grid grid-cols-2 justify-items-center gap-3">
+      <div className="grid grid-cols-1 justify-items-center">
         {posts.map((post) => {
           return (
             <>
