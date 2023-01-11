@@ -53,8 +53,8 @@
 }
 
 .impactText {
-  @apply text-xl sm:text-2xl 2xl:text-3xl text-left py-4 px-4 font-serif;
-  line-height: 1.5;
+  @apply text-base md:text-[20px] text-left py-4 px-36 font-serif;
+  line-height: 1.6;
 }
 
 .impactH3 {

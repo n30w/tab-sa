@@ -8,7 +8,7 @@ export default function PhotoGallery({ photos }) {
   const a = new Array();
   photos.map((photo) => {
     a.push({
-      src: photo.url,
+      src: `https://tab-sa.imgix.net/media/${photo.filename}`,
       width: photo.width,
       height: photo.height,
       alt: photo.alt,
@@ -28,8 +28,20 @@ export default function PhotoGallery({ photos }) {
     setViewerIsOpen(false);
   };
 
+  const renderWithNextJS = (photo) => {
+    return (
+      <Image
+        width={photo.width}
+        height={photo.height}
+        src={photo.src}
+        alt={photo.alt}
+      />
+    );
+  };
+
   return (
     <div>
+      {/* Uses this algorithm:https://medium.com/google-design/google-photos-45b714dfbed1 */}
       <Gallery photos={a} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (

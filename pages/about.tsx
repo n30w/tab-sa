@@ -34,7 +34,7 @@ export default function About({ page }: any) {
           <div className="sectionContent">
             <div className="sectionText">
               TAB-SA thanks our countless sponsors in the local communities,
-              schools, and friends in many countries. We couldn`&apos;`t do this
+              schools, and friends in many countries. We couldn't do this
               without you!
             </div>
 
@@ -50,6 +50,7 @@ export default function About({ page }: any) {
               <div>
                 <a
                   target="_blank"
+                  rel="noreferrer"
                   href="https://westoahu.hawaii.edu/ekamakanihou/?p=6164"
                 >
                   UH West Oahu

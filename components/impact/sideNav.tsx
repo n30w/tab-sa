@@ -52,10 +52,10 @@ export default function SideNav({ posts, post }) {
                           textDecorationColor: "#FFB612",
                           textDecorationThickness: "3.3px",
                         }}
-                        className={`hover:bg-[#ffeaba] text-center py-2 transition-opacity duration-100 hover:underline hover:opacity-100 underline-offset-4 px-6 rounded-md border-black border-2 ${
+                        className={`hover:bg-[#ffeaba] text-center py-2 transition-opacity duration-100  hover:opacity-100 underline-offset-4 px-6 rounded-md ${
                           decode(router.asPath) ===
                           "/impact/" + post.category.name + "/" + post.author
-                            ? "underline "
+                            ? "bg-[#FFB612]"
                             : "opacity-50"
                         }`}
                         key={i}

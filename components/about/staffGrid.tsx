@@ -18,8 +18,8 @@ export default function staffGrid({ staff }: any) {
               <div className="w-72 overflow-hidden rounded-xl">
                 <Image
                   src={p.staff.image.url}
-                  height={500}
-                  width={500}
+                  height={1000}
+                  width={1000}
                   className="object-cover w-96 h-96 px-4 select-none grayscale"
                   alt={`${p.staff.firstName} ${p.staff.lastName}`}
                 />

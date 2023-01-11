@@ -1,7 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import serialize from "../lib/serialize";
+import { useRouter } from "next/router";
 
-export default function Impact() {
+export default function Impact({ years }) {
+  const router = useRouter();
   return (
     <>
       <div className="page">
@@ -19,14 +21,46 @@ export default function Impact() {
           </div>
 
           <div className="sectionContent">
-            <div className="card w-full h-96 bg-slate-300">
+            {years.map((year) => {
+              return (
+                <>
+                  <div
+                    className="w-full h-96 rounded-md hover:bg-[#ffeaba] hover:cursor-pointer border-2 border-black"
+                    onClick={() => {
+                      router.push(`/impact/${year}`);
+                    }}
+                  >
+                    {year}
+                  </div>
+                </>
+              );
+            })}
+            {/* <div className="card w-full h-96 bg-slate-300">
               PLACEHOLDER - Javascript Snippet Gallery with Text
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const posts = await res.json();
+  const years = new Array();
+  posts.docs.map((post) => {
+    if (!years.includes(parseInt(post.category.name))) {
+      years.push(parseInt(post.category.name));
+    }
+  });
+  return {
+    props: {
+      years: years.sort((a, b) => {
+        return a - b;
+      }),
+    },
+  };
 }
 
 // export const getStaticPaths: GetStaticPaths = async () => {

@@ -4,17 +4,24 @@ import ImpactGrid from "../../components/impact/impactGrid";
 import PhotoGallery from "../../components/impact/photoGallery";
 
 export default function year({ posts, year, media }) {
+  console.log(media.length);
   return (
     <>
       <div className="page">
         <div className="content">
           <div className="sectionHeader">
-            <h1>{year} Impacts</h1>
+            <h1>Impact in {year}</h1>
           </div>
           <div className="sectionContent">
-            {/* <PhotoswipeGallery galleryID={"me"} props={media} /> */}
-            <PhotoGallery photos={media} />
             <ImpactGrid posts={posts} year={year} />
+            {media.length > 0 && (
+              <>
+                <h2 className="sectionHeader pt-7">Photos</h2>
+                <div className="bg-slate-100 rounded-md px-4 py-4">
+                  <PhotoGallery photos={media} />
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -56,7 +63,7 @@ export async function getStaticProps({ params }) {
       `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
     ),
     fetch(
-      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/media${stringifiedQuery}`
+      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/media${stringifiedQuery}&limit=100`
     ),
   ]);
 
