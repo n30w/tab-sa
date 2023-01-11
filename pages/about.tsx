@@ -34,7 +34,7 @@ export default function About({ page }: any) {
           <div className="sectionContent">
             <div className="sectionText">
               TAB-SA thanks our countless sponsors in the local communities,
-              schools, and friends in many countries. We couldn't do this
+              schools, and friends in many countries. We couldn&apos;t do this
               without you!
             </div>
 
@@ -46,7 +46,9 @@ export default function About({ page }: any) {
               <h1>Articles</h1>
             </div>
             <div className="sectionContent">
-              <div className="sectionText">Articles we've been featured in</div>
+              <div className="sectionText">
+                Articles we&apos;ve been featured in
+              </div>
               <div>
                 <a
                   target="_blank"

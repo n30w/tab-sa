@@ -43,6 +43,8 @@ export default function PhotoGallery({ photos }) {
     <div>
       {/* Uses this algorithm:https://medium.com/google-design/google-photos-45b714dfbed1 */}
       <Gallery photos={a} onClick={openLightbox} />
+      {/*
+      // @ts-ignore */}
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
