@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <div className="footer p-14 pb-10 hidden md:pb-10 bg-base-200 text-base-content font-atkinson md:grid grid-cols-1 md:grid-cols-5 justify-items-bottom">
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center justify-center">
           <Image
             alt="Teachers Across Borders Logo"
             src="/Logo.svg"
@@ -15,8 +15,9 @@ export default function Footer() {
             height={335}
           />
         </div>
+        <div className=""></div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col pt-8">
           <span className="footer-title">
             <span style={{ fontWeight: 700, textTransform: "none" }}>
               Teachers Across Borders
