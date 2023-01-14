@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { navigation } from "./navbar";
 
 export default function Footer() {
@@ -6,7 +7,13 @@ export default function Footer() {
     <>
       <div className="footer p-10 pb-10 md:pb-10 bg-base-200 text-base-content font-atkinson">
         <div className="">
-          <img src="/Logo.svg" className="scale-150" />
+          <Image
+            alt="Teachers Across Borders Logo"
+            src="/Logo.svg"
+            className="scale-50"
+            width={312}
+            height={335}
+          />
         </div>
 
         <div>

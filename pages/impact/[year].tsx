@@ -13,6 +13,11 @@ export default function year({ posts, year, media }) {
             <h1>Impact in {year}</h1>
           </div>
           <div className="sectionContent">
+            <p>
+              These are impacts from {year} — reflections, speeches, letters, or
+              photos demonstrating the impacts of our organization on the
+              teachers, leaders, and communities involved in our program.
+            </p>
             <ImpactGrid posts={posts} year={year} />
             {media.length > 0 && (
               <>

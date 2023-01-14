@@ -14,9 +14,9 @@ export default function Impact({ years }) {
 
           <div className="sectionContent">
             <p className="sectionText">
-              View reflections, speeches, or letters demonstrating the impacts
-              of our organization on the teachers, leaders, and communities
-              involved in our program.
+              View reflections, speeches, letters, or photos demonstrating the
+              impacts of our organization on the teachers, leaders, and
+              communities involved in our program.
             </p>
           </div>
 

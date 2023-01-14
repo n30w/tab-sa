@@ -15,3 +15,7 @@
 - [Playwright Locator Strictness](https://playwright.dev/docs/locators#strictness)
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Notes
+
+- Please note that before pushing, run vercel build in root directory to verify whether it will build on Vercel.
