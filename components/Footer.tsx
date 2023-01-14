@@ -5,8 +5,8 @@ import { navigation } from "./navbar";
 export default function Footer() {
   return (
     <>
-      <div className="footer p-10 pb-10 md:pb-10 bg-base-200 text-base-content font-atkinson">
-        <div className="">
+      <div className="footer p-14 pb-10 md:pb-5 bg-base-200 text-base-content font-atkinson grid grid-cols-1 md:grid-cols-5 justify-items-bottom">
+        <div className="hidden md:block">
           <Image
             alt="Teachers Across Borders Logo"
             src="/Logo.svg"
@@ -16,7 +16,7 @@ export default function Footer() {
           />
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <span className="footer-title">
             <span style={{ fontWeight: 700, textTransform: "none" }}>
               Teachers Across Borders
