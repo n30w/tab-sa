@@ -17,7 +17,7 @@ export default function staffGrid({ staff }: any) {
             <div className="flex flex-col space-x-4 py-3 justify-center items-center">
               <div className="w-72 overflow-hidden rounded-xl">
                 <Image
-                  src={p.staff.image.url}
+                  src={`https://tab-sa.imgix.net/media/${p.staff.image.filename}`}
                   height={1000}
                   width={1000}
                   className="object-cover w-96 h-96 px-4 select-none grayscale"

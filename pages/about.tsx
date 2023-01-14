@@ -67,7 +67,6 @@ export default function About({ page }: any) {
 }
 
 export async function getStaticProps() {
-  // TODO make this have a different address when in development vs production via env variables
   const res = await fetch(
     `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/pages?where[title][equals]=About`
   );

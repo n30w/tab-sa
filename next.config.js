@@ -41,6 +41,11 @@ const nextConfig = {
         port: "4000",
         pathname: "/media/**",
       },
+      {
+        protocol: "https",
+        hostname: "tab-sa.imgix.net",
+        pathname: "/media/**",
+      },
     ],
   },
 };
