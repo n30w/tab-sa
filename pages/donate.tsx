@@ -1,6 +1,6 @@
 import Head from "next/head";
 import DonationBoxes from "../components/donate/donationBoxes";
-export default function Donate() {
+export default function Donate({ link }) {
   return (
     <>
       <Head>
@@ -21,7 +21,7 @@ export default function Donate() {
             <h2 className="text-3xl text-left md:text-center pt-8 pb-14">
               Donate to us via
             </h2>
-            <DonationBoxes />
+            <DonationBoxes pdfLink={link} />
             <div className="text-3xl text-left md:text-center pt-20">
               The structural and logistical commitment of our South African
               partners, and the enormous impact on rural school education, makes
@@ -39,10 +39,24 @@ export default function Donate() {
           </div>
         </div>
 
-        <div className="sectionHeader pt-2 pb-24">
+        <div className="sectionHeader pt-2 pb-84">
           Thank you for your support!
         </div>
+        <div className="py-20"></div>
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const req = await fetch(
+    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/files/63a6a71be4b4f97eb17ce62d`
+  );
+  const res = await req.json();
+
+  return {
+    props: {
+      link: res.url,
+    },
+  };
 }

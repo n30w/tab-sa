@@ -15,13 +15,13 @@ export default function author({ post, posts }: any) {
         <div className="grid grid-cols-5">
           <div className="col-span-1"></div>
 
-          <div className="col-span-4 lg:col-span-3 justify-self-start text-left lg:justify-self-center lg:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 pl-4 pb-4 select-none">
+          <div className="col-span-5 lg:col-span-3 justify-self-start text-left lg:justify-self-center lg:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 pl-4 pb-4 select-none">
             <h1>{post.title}</h1>
           </div>
         </div>
         <div className="grid grid-cols-5">
           <div className="col-span-1"></div>
-          <div className="col-span-4 lg:col-span-3">
+          <div className="col-span-5 lg:col-span-3">
             <h2 className="col-span-3 justify-self-start text-left lg:justify-self-center lg:text-center text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 pb-4 select-none">
               by {post.author}
             </h2>
@@ -29,10 +29,8 @@ export default function author({ post, posts }: any) {
         </div>
         <div className="grid grid-cols-5">
           <SideNav posts={posts} post={post}></SideNav>
-          <div className="col-span-4 lg:col-span-3">
-            <div className="">
-              <div className="">{serialize(post.body, "impact")}</div>
-            </div>
+          <div className="col-span-5 lg:col-span-3">
+            <div className="">{serialize(post.body, "impact")}</div>
           </div>
         </div>
       </div>

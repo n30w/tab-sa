@@ -10,7 +10,7 @@ export default function SideNav({ posts, post }) {
   const router = useRouter();
   return (
     <>
-      <div className="col-span-1 justify-self-center pt-6 hidden md:block">
+      <div className="col-span-1 justify-self-center pt-6 hidden lg:block ">
         <div className="grid grid-cols-1 px-3 stick cursor-pointer">
           <Link
             href={`

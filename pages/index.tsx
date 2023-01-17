@@ -1,5 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+import bg from "../public/index/BradUyWithOtherTeachers.jpg";
 
 export default function Home() {
   return (
@@ -10,50 +12,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="relative px-6 lg:px-8 2xl:pt-16">
-          <div className="mx-auto max-w-auto pt-28 pb-36 sm:pt-60 sm:pb-60 md:pt-48 sm:pb-84 2xl:h-screen">
+        <div className="">
+          <Image
+            src={bg}
+            style={{
+              objectFit: "cover",
+            }}
+            alt="Brad Uy"
+            fill={true}
+            className="-z-10"
+          />
+          <div className="mx-auto 2xl:h-screen pt-12">
             <div>
-              <div className="flex justify-center">
-                <img src="/Logo.svg" className="2xl:scale-150 2xl:pt-12"></img>
-              </div>
-              <div className="flex flex-col justify-center space-y-2 pt-7">
+              <div className="flex flex-col justify-start space-y-2 pt-7 text-white px-10">
                 <div className="h-7 2xl:h-28"></div>
-                <h1 className="text-4xl tracking-normal text-center sm:text-6xl 2xl:text-8xl font-atkinson font-bold">
-                  Teachers Across Borders
+                <h1 className="text-2xl tracking-normal text-left sm:text-3xl 2xl:text-5xl font-atkinson font-bold">
+                  We change communities through education
                 </h1>
-                <h1 className="text-3xl tracking-normal text-center sm:text-4xl 2xl:text-8xl font-atkinson">
-                  Southern Africa
-                </h1>
-                <div className="xs:h-3 sm:h-6"></div>
-                <h2 className="text-2xl tracking-tight text-center sm:text-3xl font-atkinson font-weight-400 ">
-                  Changing communities through education
-                </h2>
-
-                {/* <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
-                </p> */}
-                {/* <div className="mt-8 flex gap-x-4 sm:justify-center">
-                  <a
-                    href="#"
-                    className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-                  >
-                    Get started
-                    <span className="text-indigo-200" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-                  >
-                    Live demo
-                    <span className="text-gray-400" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
-                </div> */}
               </div>
             </div>
           </div>
@@ -61,20 +36,20 @@ export default function Home() {
       </main>
       <div className="hero min-h-screen content-around">
         <div className="hero-content flex flex-col">
+          <div className="flex justify-center">
+            <Image
+              src="/Logo.svg"
+              className=""
+              width={312}
+              height={335}
+              alt={"Teachers Without Borders Logo"}
+            />
+          </div>
           <p className="text-2xl sm:text-3xl lg:text-4xl px-2">
             We are a group of educators born from the legacy of Apartheid. Every
             US summer, a group of math and science educators from Hawaii and
             around the US travel to Southern Africa to conduct workshops with
             our Southern African colleagues in rural schools.
-          </p>
-          <div className="max-w-auto"></div>
-        </div>
-      </div>
-      <div className="hero min-h-screen bg-slate-100 content-around">
-        <div className="hero-content flex flex-col">
-          <p className="text-2xl sm:text-3xl lg:text-4xl px-2">
-            Our current projects take us to the Republic of South Africa and
-            Swaziland.
           </p>
           <div className="max-w-auto"></div>
         </div>

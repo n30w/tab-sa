@@ -1,10 +1,11 @@
 import { ComputerDesktopIcon, PrinterIcon } from "@heroicons/react/24/outline";
 
-export default function donationBoxes() {
+export default function donationBoxes({ pdfLink }) {
   return (
     <>
       <div className="flex flex-col justify-center w-full lg:flex-row">
         <a
+          rel="noreferrer"
           href="https://givebox.com/517849"
           className="cursor-pointer"
           target={"_blank"}
@@ -25,7 +26,12 @@ export default function donationBoxes() {
           </div>
         </a>
         <div className="divider lg:divider-horizontal">OR</div>
-        <a href="" className="cursor-pointer" target={"_blank"}>
+        <a
+          rel="noreferrer"
+          href={`${pdfLink}`}
+          className="cursor-pointer"
+          target={"_blank"}
+        >
           <div className="grid grid-cols-2 place-items-center flex-grow h-60 w-full card rounded-box text-white  bg-tabTheme-100">
             <div className="flex flex-col justify-between space-y-2 items-center px-2">
               <div className="text-2xl 2xl:text-4xl text-center font-bold tracking-wide">
