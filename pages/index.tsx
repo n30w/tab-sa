@@ -14,20 +14,10 @@ export default function Home() {
         <meta name="Teachers Across Borders Southern Africa" content="TAB-SA" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div className="flex">
-        <Image
-          src={"/index/BradUyWithOtherTeachers.jpg"}
-          alt="Sitting around a table"
-          fill
-          className="object-cover"
-        />
-      </div> */}
       <div
-        className="relative overflow-hidden bg-no-repeat bg-cover"
+        className="relative overflow-hidden bg-fill -mt-32"
         style={{
-          backgroundPosition: "50%",
-          backgroundImage: `url(${bg})`,
-          height: 500,
+          height: 1000,
         }}
       >
         <Image
@@ -36,19 +26,19 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full bg-fixed">
           <div className="flex justify-center items-center h-full">
-            <div className=" text-right text-3xl md:text-8xl z-10 col-span-5">
-              <h2
+            <div className="text-center text-3xl md:text-6xl col-span-5">
+              <h1
                 style={{
                   lineHeight: 1.15,
                   letterSpacing: -2.5,
                 }}
               >
-                <span className="bg-[#ffeaba] text-black font-bold">
+                <span className=" text-white font-bold rounded-xl">
                   We change communities through education.
                 </span>
-              </h2>
+              </h1>
             </div>
           </div>
         </div>
@@ -63,7 +53,7 @@ export default function Home() {
                   letterSpacing: -2.5,
                 }}
               >
-                <span className="bg-[#ffeaba] text-black font-bold">
+                <span className="bg-[#ffeaba] text-black font-bold rounded-xl">
                   We are a group of educators born from the legacy of Apartheid.
                 </span>
               </h2>
@@ -106,21 +96,21 @@ export default function Home() {
               alt={"Sitting around a table"}
             />
           </div>
-          <div className="row-span-full col-span-6 col-end-11 self-center p-12 z-10">
+          <div className="row-span-full col-span-6 col-start-7 col-end-13 self-center p-12 z-10">
             <div className="grid grid-cols-3">
-              <div className="text-right text-3xl md:text-7xl col-span-5">
+              <div className="text-left text-3xl md:text-7xl col-span-5">
                 <h2
                   style={{
                     lineHeight: 1.15,
                     letterSpacing: -2.5,
                   }}
                 >
-                  <span className="bg-[#ffeaba] text-black font-bold">
-                    We are in a critical juncture of South Africa&apos;s history{" "}
+                  <span className="bg-[#ffeaba] text-black font-bold rounded-xl">
+                    We are at a critical juncture of South Africa&apos;s history{" "}
                   </span>
                 </h2>
               </div>
-              <p className="text-2xl pt-7 col-span-2 col-start-2 text-left pl-4 text-black">
+              <p className="text-2xl pt-7 text-left col-span-3 text-black">
                 {" "}
                 The Republic of South Africa is at a critical juncture in its
                 history. The national government has identified the teaching and
@@ -141,6 +131,54 @@ export default function Home() {
                 </span>
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-5/6 mx-auto pt-20">
+        <div className="grid grid-cols-1 justify-items-center">
+          <div className="text-center text-3xl md:text-7xl col-span-1">
+            <h2
+              style={{
+                lineHeight: 1.15,
+                letterSpacing: -2.5,
+              }}
+            >
+              <span className="bg-[#ffeaba] text-black font-bold rounded-xl">
+                We could use another hand
+              </span>
+            </h2>
+          </div>
+          <div className="col-span-1">
+            <Image
+              alt="Teachers Across Borders Logo"
+              src="/Logo.svg"
+              className="scale-100 pt-12"
+              width={312}
+              height={335}
+            />
+          </div>
+          <div className="col-span-1 pt-12">
+            <p className="text-4xl">
+              Want to help? You can{" "}
+              <span
+                className="customLink"
+                onClick={() => {
+                  router.push("/contact");
+                }}
+              >
+                contact
+              </span>{" "}
+              us or{" "}
+              <span
+                className="customLink"
+                onClick={() => {
+                  router.push("/donate");
+                }}
+              >
+                donate
+              </span>{" "}
+              ! Help us help others.
+            </p>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@
 }
 
 .customLink {
-  @apply text-blue-600 after:content-['_↗']
+  @apply text-blue-600 after:content-['_↗'] hover:cursor-pointer
 }
 
 .page {
