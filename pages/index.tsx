@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import bg from "../public/index/BradUyWithOtherTeachers.jpg";
+import Slideshow from "../components/index/slideshow";
 
 export default function Home() {
   return (
@@ -12,16 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="block">
-          <Image
-            src={bg}
-            style={{
-              objectFit: "cover",
-            }}
-            alt="Brad Uy"
-            fill={true}
-            className="-z-10"
-          />
+        <div className="">
+          <Slideshow />
         </div>
       </main>
     </>
