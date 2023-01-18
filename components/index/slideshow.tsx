@@ -34,23 +34,22 @@ export default function slideshow() {
   ];
   return (
     <>
-      <Fade canSwipe={false} arrows={false} infinite={false}>
+      <Fade canSwipe={false} arrows={false} cssClass="relative w-full h-full">
         {images.map((image, i) => {
           return (
-            <div className=" h-full w-full -z-10" key={i}>
-              <Image
-                src={`/index/${image.src}`}
-                style={{
-                  objectFit: "cover",
-                }}
-                alt={image.alt}
-                fill={true}
-                className="grayscale"
-                sizes="(max-width: 768px) 100vw,
+            <Image
+              key={i}
+              src={`/index/${image.src}`}
+              style={{
+                objectFit: "contain",
+              }}
+              alt={image.alt}
+              fill={true}
+              className="grayscale"
+              sizes="(max-width: 768px) 100vw,
                   (max-width: 1200px) 50vw,
                   33vw"
-              />
-            </div>
+            />
           );
         })}
       </Fade>

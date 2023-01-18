@@ -15,6 +15,10 @@
   left: 50%
 }
 
+.customLink {
+  @apply text-blue-600 after:content-['_↗']
+}
+
 .page {
   @apply container mx-auto font-atkinson
 }

@@ -66,7 +66,13 @@ const serialize = (children, type) =>
         return <li key={i}>{serialize(node.children, type)}</li>;
       case "link":
         return (
-          <a href={escapeHTML(node.url)} key={i}>
+          <a
+            href={escapeHTML(node.url)}
+            key={i}
+            rel="noreferrer"
+            target={"_blank"}
+            className="customLink"
+          >
             {serialize(node.children, type)}
           </a>
         );
