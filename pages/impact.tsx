@@ -48,7 +48,9 @@ export default function Impact({ years }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const res = await fetch(
+    `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts?limit=100`
+  );
   const posts = await res.json();
   const years = new Array();
   posts.docs.map((post) => {

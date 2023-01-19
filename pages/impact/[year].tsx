@@ -65,7 +65,7 @@ export async function getStaticProps({ params }) {
 
   const [res1, res2] = await Promise.all([
     fetch(
-      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}`
+      `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts${stringifiedQuery}&limit=100`
     ),
     fetch(
       `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/media${stringifiedQuery}&limit=100`
