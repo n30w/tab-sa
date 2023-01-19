@@ -84,6 +84,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true, // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
+    fallback: "blocking", // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
   };
 }
