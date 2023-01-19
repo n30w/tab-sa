@@ -15,7 +15,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="relative overflow-hidden bg-fill -mt-32"
+        className="hero min-h-screen -mt-32"
+        style={{
+          backgroundImage: `url(https://tab-sa.imgix.net/media/BradUyWithOtherTeachers.jpg)`,
+        }}
+      >
+        <div className="hero-content">
+          <div className="max-w-2xl text-center text-3xl md:text-6xl col-span-5 mb-96">
+            <h1
+              style={{
+                lineHeight: 1.15,
+                // letterSpacing: -2.5,
+              }}
+            >
+              <span className="bg-south text-white font-bold rounded-xl tracking-tight">
+                We change communities through education.
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      {/* <div
+        className="relative overflow-hidden bg-fill -mt-32 h-[1000]"
         style={{
           height: 1000,
         }}
@@ -42,7 +63,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <main className="flex flex-col w-full 2xl:w-5/6 mx-auto pt-24 space-y-10">
         <section className="flex flex-col w-full items-center md:hidden">
           <h2
@@ -155,7 +176,6 @@ export default function Home() {
         </section>
         <section className="hidden md:grid md:grid-cols-10 px-20 grid-flow-row">
           <div className="row-span-full col-start-1 col-span-6 col-end-6 self-center">
-            {" "}
             <Image
               src={"/index/2016_07.jpg"}
               width={1000}
@@ -229,7 +249,7 @@ export default function Home() {
             />
           </div>
           <div className="col-span-1 pt-12">
-            <p className="text-4xl">
+            <p className="text-xl 2xl:text-4xl px-2">
               Want to help? You can{" "}
               <span
                 className="customLink"
