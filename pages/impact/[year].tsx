@@ -2,9 +2,9 @@ import Link from "next/link";
 import qs from "qs";
 import ImpactGrid from "../../components/impact/impactGrid";
 import PhotoGallery from "../../components/impact/photoGallery";
+import fetch from "node-fetch";
 
 export default function year({ posts, year, media }) {
-  console.log(media.length);
   return (
     <>
       <div className="page">
@@ -34,22 +34,6 @@ export default function year({ posts, year, media }) {
   );
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
-  const posts = await res.json();
-
-  const paths = posts?.docs.map((post) => ({
-    params: {
-      year: post.category.name,
-    },
-  }));
-
-  return {
-    paths,
-    fallback: false, // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
-  };
-}
-
 export async function getStaticProps({ params }) {
   const query = {
     "category.name": {
@@ -77,10 +61,29 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      // @ts-ignore
       posts: posts.docs,
       year: params.year,
+      // @ts-ignore
       media: media.docs,
     },
     revalidate: 10,
+  };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const posts = await res.json();
+
+  // @ts-ignore
+  const paths = posts?.docs.map((post) => ({
+    params: {
+      year: post.category.name,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking", // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
   };
 }

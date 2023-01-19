@@ -16,7 +16,7 @@ export default async function handler(
      ** accessing the entire query string, and the .path comes
      ** from the actual name of the thing we want. In this case,
      ** the query we would be receiving is something like
-     ** "http://domainname.com/api/revalidate?secret=......&path=..."
+     ** http://domainname.com/api/revalidate?secret=......&path="..."
      ** The path part is the .path part of that URL. If there were any
      ** other query parameters, they can be accessed similarly like an object property
      ** using the . (dot)
