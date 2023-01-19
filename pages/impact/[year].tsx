@@ -34,23 +34,6 @@ export default function year({ posts, year, media }) {
   );
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
-  const posts = await res.json();
-
-  // @ts-ignore
-  const paths = posts?.docs.map((post) => ({
-    params: {
-      year: post.category.name,
-    },
-  }));
-
-  return {
-    paths,
-    fallback: false, // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
-  };
-}
-
 export async function getStaticProps({ params }) {
   const query = {
     "category.name": {
@@ -85,5 +68,22 @@ export async function getStaticProps({ params }) {
       media: media.docs,
     },
     revalidate: 10,
+  };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const posts = await res.json();
+
+  // @ts-ignore
+  const paths = posts?.docs.map((post) => ({
+    params: {
+      year: post.category.name,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking", // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
   };
 }

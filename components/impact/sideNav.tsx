@@ -61,6 +61,7 @@ export default function SideNav({ posts, post }) {
                             ? "bg-[#FFB612]"
                             : "opacity-50"
                         }`}
+                        key={i}
                       >
                         <span className="text-xl">{post.author}</span>
                       </li>

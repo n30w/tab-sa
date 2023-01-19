@@ -38,25 +38,6 @@ export default function author({ post, posts }: any) {
   );
 }
 
-export async function getStaticPaths() {
-  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
-  const posts = await res.json();
-
-  // @ts-ignore
-  const paths = posts.docs.map((post) => ({
-    params: {
-      year: post.category.name,
-      author: post.author,
-      // author: post.author.replace(/\s/g, "").toLowerCase(),
-    },
-  }));
-
-  return {
-    paths,
-    fallback: false, // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
-  };
-}
-
 export async function getStaticProps({ params }) {
   const query1 = {
     author: {
@@ -113,5 +94,24 @@ export async function getStaticProps({ params }) {
       posts: posts.docs,
     },
     revalidate: 10,
+  };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
+  const posts = await res.json();
+
+  // @ts-ignore
+  const paths = posts.docs.map((post) => ({
+    params: {
+      year: post.category.name,
+      author: post.author,
+      // author: post.author.replace(/\s/g, "").toLowerCase(),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking", // blocking here is if you have a lot of paths that don't need to be generated until they are queried by the user.
   };
 }
