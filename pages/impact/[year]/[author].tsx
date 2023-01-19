@@ -4,11 +4,11 @@ import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import SideNav from "../../../components/impact/sideNav";
+import fetch from "node-fetch";
 
 var decode = require("urldecode");
 
 export default function author({ post, posts }: any) {
-  // const router = useRouter();
   return (
     <>
       <div className="page">
@@ -42,6 +42,7 @@ export async function getStaticPaths() {
   const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
   const posts = await res.json();
 
+  // @ts-ignore
   const paths = posts.docs.map((post) => ({
     params: {
       year: post.category.name,
@@ -106,7 +107,9 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      // @ts-ignore
       post: post.docs[0],
+      // @ts-ignore
       posts: posts.docs,
     },
     revalidate: 10,

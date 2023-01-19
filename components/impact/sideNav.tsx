@@ -46,7 +46,10 @@ export default function SideNav({ posts, post }) {
               {posts.map((post, i) => {
                 return (
                   <>
-                    <Link href={`/impact/${post.category.name}/${post.author}`}>
+                    <Link
+                      href={`/impact/${post.category.name}/${post.author}`}
+                      key={i}
+                    >
                       <li
                         style={{
                           textDecorationColor: "#FFB612",
@@ -58,7 +61,6 @@ export default function SideNav({ posts, post }) {
                             ? "bg-[#FFB612]"
                             : "opacity-50"
                         }`}
-                        key={i}
                       >
                         <span className="text-xl">{post.author}</span>
                       </li>

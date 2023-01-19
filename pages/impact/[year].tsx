@@ -2,9 +2,9 @@ import Link from "next/link";
 import qs from "qs";
 import ImpactGrid from "../../components/impact/impactGrid";
 import PhotoGallery from "../../components/impact/photoGallery";
+import fetch from "node-fetch";
 
 export default function year({ posts, year, media }) {
-  console.log(media.length);
   return (
     <>
       <div className="page">
@@ -38,6 +38,7 @@ export async function getStaticPaths() {
   const res = await fetch(`${process.env.PAYLOAD_PUBLIC_SERVER_URL}/api/posts`);
   const posts = await res.json();
 
+  // @ts-ignore
   const paths = posts?.docs.map((post) => ({
     params: {
       year: post.category.name,
@@ -77,8 +78,10 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      // @ts-ignore
       posts: posts.docs,
       year: params.year,
+      // @ts-ignore
       media: media.docs,
     },
     revalidate: 10,

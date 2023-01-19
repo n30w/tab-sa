@@ -21,11 +21,12 @@ export default function Impact({ years }) {
           </div>
 
           <div className="sectionContent">
-            {years.map((year) => {
+            {years.map((year, i) => {
               return (
                 <>
                   <div
                     className="w-full h-20 my-3 rounded-md hover:bg-[#ffeaba] hover:cursor-pointer border-2 border-black"
+                    key={i}
                     onClick={() => {
                       router.push(`/impact/${year}`);
                     }}
