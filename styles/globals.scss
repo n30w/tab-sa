@@ -47,8 +47,13 @@
   @apply text-transparent bg-clip-text bg-gradient-to-r from-tabTheme-200 to-tabTheme-100;
 }
 
+// .sectionHeader {
+//   @apply text-left md:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 pb-4 md:px-16 select-none;
+// }
+
 .sectionHeader {
-  @apply text-left md:text-center font-bold text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-t from-tabTheme-200 to-tabTheme-100 px-4 pb-4 md:px-16 select-none;
+  @apply  text-black font-bold rounded-xl text-3xl md:text-5xl tracking-tight select-none md:text-center text-left px-4 md:px-16;
+  line-height: 1.15;
 }
 
 .sectionText {
@@ -62,7 +67,7 @@
 }
 
 .impactH3 {
-  @apply text-xl sm:text-3xl 2xl:text-4xl text-left pt-6 pb-0 px-4 font-serif;
+  @apply text-xl sm:text-2xl 2xl:text-3xl text-left pt-6 pb-0 px-4 lg:px-20 font-atkinson text-black;
   line-height: 1;
 }
 

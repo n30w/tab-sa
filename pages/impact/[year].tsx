@@ -81,5 +81,6 @@ export async function getStaticProps({ params }) {
       year: params.year,
       media: media.docs,
     },
+    revalidate: 10,
   };
 }

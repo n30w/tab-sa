@@ -9,9 +9,9 @@ import FullWidthNavbar from "./navbar/fullWidthNav";
 export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
+  // { name: "Projects", href: "/projects" },
   { name: "Impact", href: "/impact" },
-  { name: "Resources", href: "/resources" },
+  // { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
   { name: "Donate", href: "/donate" },
 ];

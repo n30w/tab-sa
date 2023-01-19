@@ -58,5 +58,6 @@ export async function getStaticProps() {
     props: {
       link: res.url,
     },
+    revalidate: 10,
   };
 }

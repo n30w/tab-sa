@@ -102,7 +102,6 @@ export default function Home() {
           <h2
             style={{
               lineHeight: 1.15,
-              // letterSpacing: -2.5,
             }}
           >
             <span className="bg-[#ffeaba] text-black font-bold rounded-xl text-3xl tracking-tight">

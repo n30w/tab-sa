@@ -27,7 +27,7 @@ export default function author({ post, posts }: any) {
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-5 pb-24 md:pb-2">
           <SideNav posts={posts} post={post}></SideNav>
           <div className="col-span-5 lg:col-span-3">
             <div className="">{serialize(post.body, "impact")}</div>
@@ -108,7 +108,7 @@ export async function getStaticProps({ params }) {
     props: {
       post: post.docs[0],
       posts: posts.docs,
-      // revalidate: 10,
     },
+    revalidate: 10,
   };
 }
