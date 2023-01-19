@@ -29,41 +29,12 @@ export default function Home() {
               }}
             >
               <span className="bg-south text-white font-bold rounded-xl tracking-tight">
-                We change communities through education.
+                We change communities through education
               </span>
             </h1>
           </div>
         </div>
       </div>
-      {/* <div
-        className="relative overflow-hidden bg-fill -mt-32 h-[1000]"
-        style={{
-          height: 1000,
-        }}
-      >
-        <Image
-          src={"/index/BradUyWithOtherTeachers.jpg"}
-          alt="Sitting around a table"
-          fill
-          className="object-cover contrast-125"
-        />
-        <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full bg-fixed">
-          <div className="flex justify-center items-center h-full">
-            <div className="text-center text-3xl md:text-6xl col-span-5 r">
-              <h1
-                style={{
-                  lineHeight: 1.15,
-                  // letterSpacing: -2.5,
-                }}
-              >
-                <span className=" text-white font-bold rounded-xl tracking-tighte">
-                  We change communities through education.
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <main className="flex flex-col w-full 2xl:w-5/6 mx-auto pt-24 space-y-10">
         <section className="flex flex-col w-full items-center md:hidden">
           <h2
@@ -73,7 +44,7 @@ export default function Home() {
             }}
           >
             <span className="bg-[#ffeaba] text-black font-bold text-3xl rounded-xl tracking-tight">
-              We are a group of educators born from the legacy of Apartheid.
+              We are a group of educators born from the legacy of Apartheid
             </span>
           </h2>
           <Image
@@ -84,10 +55,9 @@ export default function Home() {
             alt={"Sitting around a table"}
           />
           <p className="text-lg 2xl:text-2xl pt-7 px-2 text-black">
-            {" "}
             Every US summer, a group of math and science educators from Hawaii
             and around the US travel to Southern Africa to conduct workshops
-            with our Southern African colleagues in rural schools.{" "}
+            with our Southern African colleagues in rural schools.
             <span
               className="customLink hover:cursor-pointer"
               onClick={() => {
@@ -105,7 +75,7 @@ export default function Home() {
             }}
           >
             <span className="bg-[#ffeaba] text-black font-bold rounded-xl text-3xl tracking-tight">
-              We are at a critical juncture in South Africa&apos;s history{" "}
+              We are at a critical juncture in South Africa&apos;s history
             </span>
           </h2>
           <Image
@@ -123,7 +93,7 @@ export default function Home() {
             the educational system, a massive infusion of material support and
             professional training of teachers and administrators is required,
             quickly, efficiently, and effectively to appropriately serve the
-            long-neglected majority population of school children.{" "}
+            long-neglected majority population of school children.
             <span
               className="customLink hover:cursor-pointer"
               onClick={() => {
@@ -144,14 +114,14 @@ export default function Home() {
                 }}
               >
                 <span className="bg-[#ffeaba] text-black font-bold rounded-xl tracking-tight">
-                  We are a group of educators born from the legacy of Apartheid.
+                  We are a group of educators born from the legacy of Apartheid
                 </span>
               </h2>
               <p className="text-lg 2xl:text-2xl pt-7 w-2/3 text-black">
                 {" "}
                 Every US summer, a group of math and science educators from
                 Hawaii and around the US travel to Southern Africa to conduct
-                workshops with our Southern African colleagues in rural schools.{" "}
+                workshops with our Southern African colleagues in rural schools.
                 <span
                   className="customLink hover:cursor-pointer"
                   onClick={() => {
@@ -205,7 +175,7 @@ export default function Home() {
                   infusion of material support and professional training of
                   teachers and administrators is required, quickly, efficiently,
                   and effectively to appropriately serve the long-neglected
-                  majority population of school children.{" "}
+                  majority population of school children.
                   <span
                     className="customLink hover:cursor-pointer"
                     onClick={() => {
