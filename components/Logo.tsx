@@ -1,4 +1,6 @@
-export default function Logo() {
+import { FC } from "react";
+
+const Logo: FC = () => {
   return (
     <>
       <div className="scale-50 sm:scale-100">
@@ -30,4 +32,6 @@ export default function Logo() {
       </div>
     </>
   );
-}
+};
+
+export default Logo;

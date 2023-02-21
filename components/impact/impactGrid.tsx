@@ -1,7 +1,13 @@
 import Link from "next/link";
 import ImpactCard from "./impactCard";
+import { FC } from "react";
 
-export default function impactGrid({ posts, year }) {
+export type impactGridTypes = {
+  posts;
+  year: string;
+};
+
+const impactGrid: FC<impactGridTypes> = ({ posts, year }) => {
   return (
     <>
       <div className="grid grid-cols-1 justify-items-center gap-y-2 pt-10">
@@ -17,4 +23,6 @@ export default function impactGrid({ posts, year }) {
       </div>
     </>
   );
-}
+};
+
+export default impactGrid;

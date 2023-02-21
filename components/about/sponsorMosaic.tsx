@@ -1,6 +1,7 @@
+import { FC } from "react";
 import fcrlogo from "../../public/fcrlogo.svg";
 
-export default function sponsorMosaic() {
+const sponsorMosaic: FC = () => {
   return (
     <>
       <div className="py-14 grid grid-cols-1 2xl:grid-cols-3 content-start justify-items-center text-center">
@@ -31,7 +32,7 @@ export default function sponsorMosaic() {
         </div>
 
         <div className="flex flex-wrap w-full lg:flex-row px-9 py-9 justify-evenly space-y-4 items-center">
-          <a href="https://www.punahou.edu/" target={"_blank"}>
+          <a href="https://www.punahou.edu/" target={"_blank"} rel="noreferrer">
             <div className="grid flex-grow justify-items-center pt-4">
               <div className="h-60 card bg-[#052057] px-9 py-4">
                 <img
@@ -45,7 +46,7 @@ export default function sponsorMosaic() {
               </div>
             </div>
           </a>
-          <a href="https://www.iolani.org/" target={"_blank"}>
+          <a href="https://www.iolani.org/" target={"_blank"} rel="noreferrer">
             <div className="grid flex-grow justify-items-center place-items-center">
               <div className="h-60 w-50 card bg-[#c8102e] px-2 py-8">
                 <img
@@ -56,7 +57,7 @@ export default function sponsorMosaic() {
               </div>
             </div>
           </a>
-          <a href="https://www.exeter.edu/" target={"_blank"}>
+          <a href="https://www.exeter.edu/" target={"_blank"} rel="noreferrer">
             <div className="grid flex-grow justify-items-center place-items-center">
               <div
                 className="h-60 w-50 card bg-white border-4 border-[#9a1d2e] px-8 pt-24"
@@ -78,6 +79,7 @@ export default function sponsorMosaic() {
               href="https://firstcarrental.co.za"
               target={"_blank"}
               className="px-10 py-10"
+              rel="noreferrer"
             >
               <img
                 src="/about/fcrlogo.svg"
@@ -87,7 +89,11 @@ export default function sponsorMosaic() {
             </a>
           </div>
           <div className="grid flex-grow justify-items-center">
-            <a href="https://www.education.gov.za/" target={"_blank"}>
+            <a
+              href="https://www.education.gov.za/"
+              target={"_blank"}
+              rel="noreferrer"
+            >
               <img
                 src="/about/southafricadoelogo.png"
                 alt="South Africa Department of Education"
@@ -98,4 +104,6 @@ export default function sponsorMosaic() {
       </div>
     </>
   );
-}
+};
+
+export default sponsorMosaic;

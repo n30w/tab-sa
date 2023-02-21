@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { navigation } from "./navbar";
 import { useRouter } from "next/router";
+import { FC } from "react";
 
-export default function Footer() {
+const Footer: FC = () => {
   const router = useRouter();
 
   return (
@@ -43,4 +44,6 @@ export default function Footer() {
       )}
     </>
   );
-}
+};
+
+export default Footer;

@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { FC } from "react";
 
-export default function DesktopTitle({ mobileMenuOpen }: any) {
+export type desktopTitleTypes = {
+  mobileMenuOpen: boolean;
+};
+
+const DesktopTitle: FC<desktopTitleTypes> = ({ mobileMenuOpen }) => {
   return (
     <>
       {/* bg-gradient-to-r from-[#003166] to-[#2B6798] */}
@@ -27,4 +32,6 @@ export default function DesktopTitle({ mobileMenuOpen }: any) {
       </div>
     </>
   );
-}
+};
+
+export default DesktopTitle;

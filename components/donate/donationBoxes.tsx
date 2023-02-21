@@ -1,14 +1,19 @@
 import { ComputerDesktopIcon, PrinterIcon } from "@heroicons/react/24/outline";
+import { FC } from "react";
 
-export default function donationBoxes({ pdfLink }) {
+export type donationBoxesTypes = {
+  pdfLink: string;
+};
+
+const donationBoxes: FC<donationBoxesTypes> = ({ pdfLink }) => {
   return (
     <>
       <div className="flex flex-col justify-center w-full lg:flex-row">
         <a
-          rel="noreferrer"
           href="https://givebox.com/517849"
           className="cursor-pointer"
           target={"_blank"}
+          rel="noreferrer"
         >
           <div className="grid grid-cols-2 place-items-center flex-grow h-60 card rounded-box text-white bg-tabTheme-200">
             <div className="flex flex-col justify-between space-y-2 items-center px-2">
@@ -47,4 +52,6 @@ export default function donationBoxes({ pdfLink }) {
       </div>
     </>
   );
-}
+};
+
+export default donationBoxes;
