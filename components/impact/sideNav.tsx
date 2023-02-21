@@ -1,11 +1,16 @@
 import ArrowLeftIcon from "@heroicons/react/24/outline/ArrowLeftIcon";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { FC, useState } from "react";
 
 var decode = require("urldecode");
 
-export default function SideNav({ posts, post }) {
+export type sideNavTypes = {
+  posts;
+  post;
+};
+
+const SideNav: FC<sideNavTypes> = ({ posts, post }) => {
   const [isHover, setHover] = useState(false);
   const router = useRouter();
   return (
@@ -75,4 +80,6 @@ export default function SideNav({ posts, post }) {
       </div>
     </>
   );
-}
+};
+
+export default SideNav;
