@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { FC } from "react";
 import { Fade, Slide } from "react-slideshow-image";
 
-export default function slideshow() {
+const Slideshow: FC = () => {
   const images = [
     {
       src: "2016_07.jpg",
@@ -55,4 +56,6 @@ export default function slideshow() {
       </Fade>
     </>
   );
-}
+};
+
+export default Slideshow;
