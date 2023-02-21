@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { FC } from "react";
 
-export default function staffGrid({ staff }: any) {
+export type staffGridTypes = { staff };
+
+const staffGrid: FC<staffGridTypes> = ({ staff }) => {
   return (
     <>
-      {/* <div>{staff.role}</div> */}
       <ul className="flow flex-col justify-between items-center px-3 py-9 gap-0 md:items-start md:grid md:w-auto md:grid-cols-3 md:justify-items-center md:gap-2 align-top">
         {staff?.map((p, i) => (
           <li
@@ -38,4 +40,6 @@ export default function staffGrid({ staff }: any) {
       </ul>
     </>
   );
-}
+};
+
+export default staffGrid;
