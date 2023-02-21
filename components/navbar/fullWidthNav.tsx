@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { FC } from "react";
 
-export default function FullWidthNavbar({ navigation }: any) {
+export type fullWidthNavbarTypes = {
+  navigation;
+};
+
+const FullWidthNavbar: FC<fullWidthNavbarTypes> = ({ navigation }) => {
   const router = useRouter();
   return (
     <>
@@ -71,4 +76,6 @@ export default function FullWidthNavbar({ navigation }: any) {
       </div>
     </>
   );
-}
+};
+
+export default FullWidthNavbar;
