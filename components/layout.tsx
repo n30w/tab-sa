@@ -1,7 +1,12 @@
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import { FC } from "react";
 
-export default function Layout({ children }: any) {
+export type layoutTypes = {
+  children: any;
+};
+
+const Layout: FC<layoutTypes> = ({ children }) => {
   return (
     <>
       <Navbar />
@@ -9,4 +14,6 @@ export default function Layout({ children }: any) {
       <Footer />
     </>
   );
-}
+};
+
+export default Layout;
