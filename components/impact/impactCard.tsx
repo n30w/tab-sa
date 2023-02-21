@@ -1,6 +1,11 @@
+import { FC } from "react";
 import serialize from "../../lib/serialize";
 
-export default function impactCard({ post }) {
+export type impactCardTypes = {
+  post;
+};
+
+const impactCard: FC<impactCardTypes> = ({ post }) => {
   return (
     <>
       <div className="w-full md:w-screen h-32 bg-base-100 border-2 border-black hover:bg-[#ffeaba] rounded-md">
@@ -13,4 +18,6 @@ export default function impactCard({ post }) {
       </div>
     </>
   );
-}
+};
+
+export default impactCard;
