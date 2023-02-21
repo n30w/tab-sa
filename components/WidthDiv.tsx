@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 export type widthDivTypes = {
-  height: string;
+  height?: string;
   content: any;
 };
 
