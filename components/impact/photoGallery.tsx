@@ -1,9 +1,13 @@
-import { useCallback, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import Image from "next/image";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
-export default function PhotoGallery({ photos }) {
+export type photoGalleryTypes = {
+  photos;
+};
+
+const PhotoGallery: FC<photoGalleryTypes> = ({ photos }) => {
   const [open, setOpen] = useState(false);
   const a = new Array();
   photos.map((photo) => {
@@ -61,4 +65,6 @@ export default function PhotoGallery({ photos }) {
       </ModalGateway>
     </div>
   );
-}
+};
+
+export default PhotoGallery;
