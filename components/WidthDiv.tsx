@@ -14,3 +14,5 @@ const WidthDiv: FC<widthDivTypes> = ({ height = "4/6", content }) => {
     </>
   );
 };
+
+export default WidthDiv;
