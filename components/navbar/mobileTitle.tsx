@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { FC } from "react";
 
-export default function MobileTitle({ func }: any) {
+export type mobileTitleTypes = {
+  func;
+};
+
+const MobileTitle: FC<mobileTitleTypes> = ({ func }) => {
   return (
     <>
       <div
@@ -29,4 +34,6 @@ export default function MobileTitle({ func }: any) {
       </div>
     </>
   );
-}
+};
+
+export default MobileTitle;
