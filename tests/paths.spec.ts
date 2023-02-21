@@ -11,7 +11,7 @@ const navbar = [
     pageText: "text=Home",
     url: "",
     locator: "h1",
-    contains: "Teachers Across Borders",
+    contains: "We change communities through education",
   },
   {
     pageName: "About",

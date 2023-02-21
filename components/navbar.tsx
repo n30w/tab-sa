@@ -1,24 +1,19 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import DesktopTitle from "./navbar/fullTitle";
 import FullWidthNavbar from "./navbar/fullWidthNav";
 
 export const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  // { name: "Projects", href: "/projects" },
   { name: "Impact", href: "/impact" },
-  // { name: "Resources", href: "/resources" },
   { name: "Contact", href: "/contact" },
   { name: "Donate", href: "/donate" },
 ];
 
-export default function Navbar() {
-  const router = useRouter();
-
+const Navbar: FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
@@ -103,4 +98,6 @@ export default function Navbar() {
       )}
     </>
   );
-}
+};
+
+export default Navbar;
