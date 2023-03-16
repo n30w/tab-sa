@@ -3,7 +3,7 @@ export default function Contact() {
     <>
       <div className="font-atkinson">
         <div className="sectionHeader">
-          <h1>Let's get in touch.</h1>
+          <h1>Let&apos;s get in touch.</h1>
         </div>
         <div className="sectionContent">
           <h2 className="text-3xl text-left md:text-center pt-9 text-black">
